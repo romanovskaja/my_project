@@ -1,0 +1,28 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="50px" height="60px">
+<defs>
+<filter id="Filter_0">
+    <feFlood flood-color="rgb(54, 54, 54)" flood-opacity="1" result="floodOut" />
+    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+</filter>
+<filter id="Filter_1">
+    <feFlood flood-color="rgb(37, 37, 37)" flood-opacity="1" result="floodOut" />
+    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+</filter>
+
+</defs>
+<g filter="url(#Filter_0)">
+<path fill-rule="evenodd"  fill="rgb(146, 153, 169)"
+ d="M3.000,-0.000 L47.000,-0.000 C48.657,-0.000 50.000,1.343 50.000,3.000 L50.000,35.000 L-0.000,35.000 L-0.000,3.000 C-0.000,1.343 1.343,-0.000 3.000,-0.000 Z"/>
+</g>
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="24px" x="11px" y="25.9520000000002px"><tspan font-size="24px" font-family="Montserrat" fill="#FFFFFF">&#51;&#48;</tspan></text>
+<g filter="url(#Filter_1)">
+<path fill-rule="evenodd"  fill="rgb(146, 153, 169)"
+ d="M-0.000,35.000 L50.000,35.000 L50.000,57.000 C50.000,58.657 48.657,60.000 47.000,60.000 L3.000,60.000 C1.343,60.000 -0.000,58.657 -0.000,57.000 L-0.000,35.000 Z"/>
+</g>
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="12px" x="14px" y="52.0619999999999px"><tspan font-size="12px" font-family="Roboto" fill="#FFFFFF">Sep&#46;</tspan></text>
+</svg>
