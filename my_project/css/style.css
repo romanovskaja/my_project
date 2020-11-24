@@ -452,6 +452,8 @@ th {
 
 .img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .slick-slider:focus {
@@ -485,7 +487,7 @@ th {
           justify-content: center;
 }
 
-.get {
+.btn {
   font-family: "Raleway";
   font-size: 14px;
   font-weight: bold;
@@ -1331,10 +1333,6 @@ button.swiper-pagination-bullet {
 
 /* Slider */
 
-.slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat;
-}
-
 /* Icons */
 
 @font-face {
@@ -1649,7 +1647,7 @@ button.swiper-pagination-bullet {
           align-items: center;
   text-align: center;
   margin-top: 20vh;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
   color: #fff;
 }
 
@@ -1745,6 +1743,10 @@ button:hover {
 
 .slick-dots li button:hover {
   background-color: transparent;
+}
+
+.slick-slider {
+  margin: 0 auto;
 }
 
 .slick-dots > .slick-active > button {
@@ -1879,6 +1881,7 @@ button:hover {
           justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-top: -41px;
 }
 
 .wordpress .container-wordpress {
@@ -1925,8 +1928,13 @@ button:hover {
   color: #615855;
 }
 
+.text > button > .btn {
+  margin: 0 !important;
+}
+
 .project {
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .project .container-project {
@@ -1934,7 +1942,7 @@ button:hover {
   margin: 0 auto;
 }
 
-.project span {
+.project h2 {
   font-size: 30px;
   font-family: "Raleway";
   color: #555555;
@@ -1954,31 +1962,33 @@ button:hover {
   max-width: 760px;
 }
 
-.project .menu {
-  margin-bottom: 80px;
-}
-
-.project .menu button {
-  margin: 0 auto;
-}
-
-.project ul {
+.project .wr-filter {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.project .wr-filter button .active {
   margin: 0 auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  border: none;
 }
 
-.project ul li {
-  padding-right: 10px;
+.project button #all,
+.project #v1,
+.project #v2,
+.project #v3,
+.project #v4 {
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
 }
 
-.project a {
+.project span {
   font-size: 14px;
   font-family: "Montserrat";
   font-weight: bold;
@@ -1991,7 +2001,7 @@ button:hover {
   border-radius: 3px;
 }
 
-.project a:hover {
+.project span:hover {
   color: #fff;
   background-color: #998675;
 }
@@ -2007,7 +2017,7 @@ button:hover {
           justify-content: center;
 }
 
-.wrapper-photography .wrapper-photo {
+.wrapper-photography .wr-blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2020,7 +2030,7 @@ button:hover {
   margin-bottom: 30px;
 }
 
-.wrapper-photography .wrapper-photo h3 {
+.wrapper-photography .wr-blocks h3 {
   font-size: 20px;
   font-family: "Raleway";
   color: #c7b299;
@@ -2029,7 +2039,7 @@ button:hover {
   margin-left: 30px;
 }
 
-.wrapper-photography .wrapper-photo h4 {
+.wrapper-photography .wr-blocks h4 {
   font-size: 14px;
   font-family: "Montserrat";
   color: #d1d1d1;
@@ -2038,16 +2048,18 @@ button:hover {
   margin-bottom: 30px;
 }
 
-.photo {
+.block {
   background-color: #fbfaf8;
   position: relative;
   margin-bottom: 30px;
   max-height: 337px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
-.photo::before {
+.block::before {
   content: url("../img/link.png");
   width: 30px;
   height: 30px;
@@ -2057,7 +2069,7 @@ button:hover {
   display: none;
 }
 
-.photo::after {
+.block::after {
   content: url("../img/lupa.png");
   width: 30px;
   height: 30px;
@@ -2067,24 +2079,33 @@ button:hover {
   display: none;
 }
 
-.photo:hover {
+.block:hover {
   background-color: #4e3427;
 }
 
-.photo:hover h3 {
+.block:hover h3 {
   color: #fff;
 }
 
-.photo:hover h4 {
+.block:hover h4 {
   color: #c7b299;
 }
 
-.photo:hover::before {
+.block:hover::before {
   display: inline;
 }
 
-.photo:hover::after {
+.block:hover::after {
   display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  margin: 0 auto;
 }
 
 .video {
@@ -2642,9 +2663,14 @@ button:hover {
     top: 5px;
     left: 20px;
     font-size: 24px;
+    z-index: 41;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
   }
 
-  .header-body img {
+  .header-body .logo img {
     width: 70%;
   }
 
@@ -2655,7 +2681,7 @@ button:hover {
     position: absolute;
     width: 30px;
     height: 20px;
-    z-index: 5;
+    z-index: 41;
   }
 
   .header_burger span {
@@ -2736,6 +2762,7 @@ button:hover {
 
   .header_list {
     display: block;
+    padding: 0;
   }
 
   .header_list li {

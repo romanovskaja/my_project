@@ -98,7 +98,7 @@ flex-direction: column;
 align-items: center;
 text-align: center;
 margin-top: 20vh;
-margin-bottom: 10vh;
+margin-bottom: 5vh;
 color: #fff;
 }
 
@@ -192,9 +192,9 @@ button:hover {
  
 }
 
-// .slick-dotted.slick-slider {
-//     z-index: 999;
-// }
+.slick-slider {
+    margin: 0 auto;
+}
 
 
 .slick-dots > .slick-active > button {
@@ -309,6 +309,7 @@ li:nth-child(4) {
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    margin-top: -41px;
     .container-wordpress {
         display: flex;
         max-width: 1173px;
@@ -341,15 +342,18 @@ li:nth-child(4) {
                 text-align: left;
                 color: #615855;
             }    
-            
         }
+        .text > button > .btn {
+            margin: 0!important;
+       } 
 .project {
     padding-top: 80px;
+    padding-bottom: 80px;
     .container-project {
         max-width: 1173px;
         margin: 0 auto;
     }
-    span {
+    h2 {
         font-size: 30px;
         font-family: "Raleway";
         color: rgb(85, 85, 85);
@@ -367,22 +371,25 @@ li:nth-child(4) {
         margin: 0 auto;
         max-width: 760px;
     }
-    .menu {
-        margin-bottom: 80px;
-        button {
-            margin: 0 auto;
-        }
-    }
-        ul {
+    .wr-filter {
+        margin-top: 20px;
         display: flex;
         justify-content: center;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        li {
-            padding-right: 10px;
+        button .active {
+            margin: 0 auto;
+            border: none;
+
         }
     }
-    a {
+    
+    button #all, #v1, #v2, #v3, #v4 {
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;   
+        }
+
+    span {
         font-size: 14px;
         font-family: "Montserrat";
         font-weight: bold;
@@ -394,7 +401,7 @@ li:nth-child(4) {
         border: 1px solid rgb(235, 235, 235);
         border-radius: 3px;  
     }
-    a:hover {
+    span:hover {
         color: #fff;
         background-color: #998675;
     }
@@ -405,7 +412,7 @@ li:nth-child(4) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    .wrapper-photo {
+    .wr-blocks {
         display: flex;
         max-width: 1180px;
         flex-wrap: wrap;
@@ -430,14 +437,16 @@ li:nth-child(4) {
             }
     }
 }
-.photo {
+.block {
     background-color: rgb(251, 250, 248);
     position: relative;
     margin-bottom: 30px;
     max-height: 337px;
     box-sizing: border-box;
+    margin-right: 5px;
+    margin-left: 5px;
 }
-.photo::before {
+.block::before {
     content: url("../img/link.png");
     width: 30px;
     height: 30px;
@@ -446,7 +455,7 @@ li:nth-child(4) {
     left: 35%;
     display: none;
     }
-.photo::after {
+.block::after {
     content: url("../img/lupa.png");
     width: 30px;
     height: 30px;
@@ -455,7 +464,7 @@ li:nth-child(4) {
     left: 55%;
     display: none;
 }
-.photo:hover  {
+.block:hover  {
     background-color:#4e3427;
     h3 {
     color: #fff;
@@ -464,11 +473,20 @@ li:nth-child(4) {
     color:rgb(199, 178, 153);
     }
 }
-.photo:hover::before {
+.block:hover::before {
     display: inline;
 }
-.photo:hover::after {
+.block:hover::after {
     display: inline;
+}
+.hide {
+    display: none;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    margin: 0 auto;
+    // margin-bottom: 80px;
 }
 .video {
     background-image: url("../img/video.jpg");
@@ -899,11 +917,14 @@ justify-content: center;
             top: 5px;
             left: 20px;
             font-size: 24px;
-        }
+            z-index: 41;
+            align-items: center;
+            margin-top: 10px;
+        
         img {
             width: 70%;
+            }
         }
- 
     }
 
 
@@ -915,7 +936,7 @@ justify-content: center;
         position: absolute;
         width: 30px;
         height: 20px;
-        z-index: 5;
+        z-index: 41;
     }
     .header_burger span {
         position: absolute;
@@ -983,6 +1004,7 @@ justify-content: center;
 
     .header_list {
         display: block;
+        padding: 0;
     }
 
     .header_list li {
