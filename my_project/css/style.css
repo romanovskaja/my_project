@@ -456,7 +456,8 @@ th {
      object-fit: cover;
 }
 
-.slick-slider:focus {
+.slick-slider:focus,
+.active {
   outline: none !important;
 }
 
@@ -466,7 +467,6 @@ th {
   display: flex;
   font-family: "Raleway";
   font-size: 34px;
-  padding-bottom: 20px;
   text-decoration: none;
   color: #fff;
   -webkit-box-align: center;
@@ -487,7 +487,18 @@ th {
           justify-content: center;
 }
 
-.btn {
+.header_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_icons a {
+  margin-top: 19px;
+}
+
+.btn,
+.btn-2 {
   font-family: "Raleway";
   font-size: 14px;
   font-weight: bold;
@@ -502,6 +513,24 @@ th {
   background-color: #998675;
   -webkit-box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.14);
           box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.14);
+}
+
+.btn-3 {
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  width: 170px;
+  min-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background-color: #998675;
+  -webkit-box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.14);
+          box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.14);
+  margin: 0 auto;
 }
 
 li {
@@ -1567,7 +1596,6 @@ button.swiper-pagination-bullet {
   height: 100%;
   width: 100%;
   background-color: transparent;
-  z-index: 3;
 }
 
 .container-castom {
@@ -1630,6 +1658,116 @@ button.swiper-pagination-bullet {
   color: #c7b299;
 }
 
+.search {
+  position: relative;
+  width: 300px;
+  margin-left: -24vh;
+  padding-top: 20px;
+}
+
+.magnifying-glass {
+  position: relative;
+  -webkit-transform: translateX(40%);
+      -ms-transform: translateX(40%);
+          transform: translateX(40%);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  -o-transition: transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  fill: white;
+}
+
+.search.active .magnifying-glass {
+  -webkit-transform: translateX(-7%);
+      -ms-transform: translateX(-7%);
+          transform: translateX(-7%);
+}
+
+.magnifying-glass-path {
+  fill: #fff;
+  stroke-dasharray: 210 808;
+  stroke-linecap: round;
+  stroke: #fff;
+  -webkit-transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+  -o-transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+}
+
+.search.active .magnifying-glass-path {
+  stroke-dasharray: 580 808;
+  stroke-dashoffset: -224px;
+  visibility: hidden;
+}
+
+.x {
+  fill: none;
+  stroke-dasharray: 56 92;
+  stroke-dashoffset: -92px;
+  stroke-linecap: round;
+  stroke-width: 6;
+  stroke: #fff;
+  -webkit-transition: stroke-dashoffset 500ms;
+  -o-transition: stroke-dashoffset 500ms;
+  transition: stroke-dashoffset 500ms;
+  visibility: hidden;
+}
+
+.search.active .x {
+  visibility: visible;
+}
+
+.search.searching .x {
+  stroke-dashoffset: 0;
+}
+
+.input {
+  border: 0;
+  font-size: 1.2em;
+  left: 20px;
+  outline: 0 !important;
+  position: absolute;
+  top: 4px;
+  background: transparent;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  -webkit-transition: background 300ms;
+  -o-transition: background 300ms;
+  transition: background 300ms;
+}
+
+.overlay-1 {
+  height: 64px;
+  left: 110px;
+  top: -10px;
+  width: 64px;
+}
+
+.overlay-2 {
+  height: 38px;
+  left: 240px;
+  top: 0px;
+  width: 38px;
+}
+
+.overlay:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.search.active .overlay-1 {
+  visibility: hidden;
+}
+
+.search:not(.active) .overlay-2,
+.search:not(.searching) .overlay-2 {
+  visibility: hidden;
+}
+
 .slider {
   max-width: 1624px;
 }
@@ -1657,16 +1795,18 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   line-height: 1.2;
   color: #fff;
+  margin: 0;
 }
 
-h2 {
+.slider-wrapper h2 {
   font-size: 52px;
   font-family: "Raleway";
   font-weight: bold;
   line-height: 1.2;
+  margin: 0;
 }
 
-p {
+.slider-wrapper p {
   font-size: 16px;
   font-family: "Montserrat";
   line-height: 1.5;
@@ -1750,7 +1890,7 @@ button:hover {
 }
 
 .slick-dots > .slick-active > button {
-  background-color: transparent !important;
+  background-color: #c7b299 !important;
 }
 
 .services {
@@ -1780,17 +1920,16 @@ button:hover {
 
 .service {
   text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .service svg {
   fill: #555555;
-}
-
-.service li:nth-child(1) {
   margin-bottom: 30px;
 }
 
-.service li:nth-child(2) {
+.service h2 {
   font-family: "Raleway";
   font-size: 22px;
   margin-bottom: 22px;
@@ -1799,7 +1938,7 @@ button:hover {
   color: #555555;
 }
 
-.service li:nth-child(3) {
+.service p {
   color: #8c8c8c;
   line-height: 1.714;
   max-width: 253px;
@@ -1808,24 +1947,25 @@ button:hover {
   margin-bottom: 30px;
 }
 
-.service li:nth-child(4) {
-  border: solid 1px #f1ede9;
+.service span::after {
+  background-color: #f1ede9;
+  content: "";
   width: 70px;
   height: 3px;
-  background-color: #f1ede9;
-  text-align: center;
   margin: 0 auto;
+  display: block;
+  margin-top: 25px;
 }
 
 .service:hover svg {
   fill: #c7b299;
 }
 
-.service:hover li:nth-child(2) {
+.service:hover h2 {
   color: #c7b299;
 }
 
-.service:hover li:nth-child(4) {
+.service:hover span::after {
   background-color: #c7b299;
   color: #c7b299;
 }
@@ -1837,7 +1977,6 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 83px;
   background: url("../img/section-2.png") no-repeat;
   background-position: center;
   background-color: #fbfaf8;
@@ -1846,6 +1985,7 @@ button:hover {
 .ideas .container-ideas {
   max-width: 1173px;
   margin: 0 auto;
+  padding-top: 30px;
 }
 
 .ideas h2 {
@@ -1867,7 +2007,7 @@ button:hover {
   color: #8c8c8c;
 }
 
-.wordpress {
+.template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1881,10 +2021,9 @@ button:hover {
           justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-top: -41px;
 }
 
-.wordpress .container-wordpress {
+.template .container-template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1900,11 +2039,11 @@ button:hover {
   width: 100%;
 }
 
-.text {
+.template-wr {
   max-width: 620px;
 }
 
-.text h2 {
+.template-wr h2 {
   font-family: Raleway;
   font-size: 28px;
   font-weight: 400;
@@ -1912,7 +2051,7 @@ button:hover {
   color: #c7b299;
 }
 
-.text h2 span {
+.template-wr h2 span {
   font-family: Raleway;
   font-size: 28px;
   font-weight: 400;
@@ -1920,7 +2059,7 @@ button:hover {
   color: #fff;
 }
 
-.text h3 {
+.template-wr h3 {
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 400;
@@ -1928,7 +2067,7 @@ button:hover {
   color: #615855;
 }
 
-.text > button > .btn {
+.template-wr > button > .btn {
   margin: 0 !important;
 }
 
@@ -1975,6 +2114,11 @@ button:hover {
 .project .wr-filter button .active {
   margin: 0 auto;
   border: none;
+  outline: none;
+}
+
+.project .wr-filter .btn-3 {
+  margin: 0 auto;
 }
 
 .project button #all,
@@ -2030,21 +2174,23 @@ button:hover {
   margin-bottom: 30px;
 }
 
-.wrapper-photography .wr-blocks h3 {
-  font-size: 20px;
-  font-family: "Raleway";
-  color: #c7b299;
-  line-height: 1.2;
-  margin-top: 30px;
+.name-photo {
   margin-left: 30px;
 }
 
-.wrapper-photography .wr-blocks h4 {
+.name-photo h3 {
+  font-size: 20px;
+  font-family: "Raleway";
+  color: #c7b299;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.name-photo h4 {
   font-size: 14px;
   font-family: "Montserrat";
   color: #d1d1d1;
-  line-height: 1.429;
-  margin-left: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -2103,11 +2249,6 @@ button:hover {
   display: none;
 }
 
-.btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
-  margin: 0 auto;
-}
-
 .video {
   background-image: url("../img/video.jpg");
   background-repeat: no-repeat;
@@ -2139,8 +2280,8 @@ button:hover {
   max-width: 1173px;
   text-align: center;
   margin: 0 auto;
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .container-video a {
@@ -2159,6 +2300,31 @@ button:hover {
   margin-bottom: 35px;
 }
 
+button {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: none !important;
+  border: none !important;
+}
+
+.container-player {
+  max-width: 100%;
+  position: relative;
+}
+
+progress {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.player {
+  position: absolute;
+  bottom: 10px;
+  left: 20%;
+  margin: 0 auto;
+  display: block;
+}
+
 .devices {
   background-color: #fbfaf8;
 }
@@ -2174,10 +2340,12 @@ button:hover {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: -5vh;
 }
 
 .devices img {
   margin-top: 80px;
+  margin-bottom: -5px;
 }
 
 .devices .wrapper-text {
@@ -2222,7 +2390,7 @@ button:hover {
   margin-right: 30px;
 }
 
-.statistics {
+.statistic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2234,7 +2402,7 @@ button:hover {
   background: linear-gradient(90deg, #211b19 0, #4e3427 100%);
 }
 
-.statistics-list {
+.statistic-wr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2248,11 +2416,23 @@ button:hover {
   max-width: 1173px;
 }
 
-.statistics-list ul {
-  margin-right: 73px;
+.statistic-wr .statistic-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 35px;
 }
 
-.statistics-list ul li {
+.statistic-wr .statistic-list img {
+  margin: 0 auto;
+  display: block;
+}
+
+.statistic-wr .statistic-list h2 {
   display: block;
   text-align: center;
   font-size: 48px;
@@ -2262,21 +2442,22 @@ button:hover {
   margin-bottom: 30px;
 }
 
-.statistics-list ul li:last-of-type {
+.statistic-wr .statistic-list span {
   font-size: 14px;
   font-family: "Montserrat";
   color: #c7b299;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.statistics-list ul::after {
-  content: url("../img/lines.png");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.statistic-wr .statistic-list span::after {
+  background-color: #f1ede9;
+  content: "";
+  width: 30px;
+  height: 2px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
 }
 
 .posts {
@@ -2393,6 +2574,13 @@ button:hover {
   width: 100%;
 }
 
+.slider-posts .photo-posts .more {
+  font-size: 14px;
+  font-family: Montserrat;
+  color: #8c8c8c;
+  line-height: 1.75;
+}
+
 .slider-posts .photo-posts::after {
   content: url("../img/date.png");
   position: absolute;
@@ -2415,6 +2603,7 @@ button:hover {
   font-size: 14px;
   font-family: "Montserrat";
   color: #c7b299;
+  text-decoration: none;
 }
 
 .photo-posts:hover {
@@ -2450,21 +2639,27 @@ button:hover {
 }
 
 .logos .container-logos {
+  min-height: 490px;
   max-width: 1173px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logos .container-logos li {
-  margin-top: 140px;
-  margin-bottom: 140px;
+  width: 210px;
+  height: 210px;
+  margin-top: 30px;
+  margin-right: 50px;
 }
 
 .wrapper-footer {
@@ -2490,7 +2685,6 @@ button:hover {
 }
 
 .waxom {
-  margin-top: -35px;
   max-width: 262px;
 }
 
@@ -2498,6 +2692,7 @@ button:hover {
   font-size: 34px;
   font-family: "Raleway";
   color: white;
+  text-decoration: none;
 }
 
 .waxom p {
@@ -2514,6 +2709,7 @@ button:hover {
   font-family: "Montserrat";
   color: #d1d1d1;
   line-height: 1.429;
+  text-decoration: none;
 }
 
 .waxom img {
@@ -2524,6 +2720,11 @@ button:hover {
 .resent-post,
 .our-twitter {
   max-width: 270px;
+}
+
+.resent-post a,
+.our-twitter a {
+  text-decoration: none;
 }
 
 .resent-post h3,
@@ -2613,6 +2814,7 @@ button:hover {
 
 .copyright .container-copyright a {
   color: #fff;
+  text-decoration: none;
 }
 
 .copyright-left,
@@ -2659,7 +2861,7 @@ button:hover {
   }
 
   .header-body .logo {
-    position: absolute;
+    position: fixed;
     top: 5px;
     left: 20px;
     font-size: 24px;
@@ -2678,7 +2880,7 @@ button:hover {
     display: block;
     top: 20px;
     right: 10%;
-    position: absolute;
+    position: fixed;
     width: 30px;
     height: 20px;
     z-index: 41;
@@ -2754,6 +2956,7 @@ button:hover {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+    margin: 0;
   }
 
   .header_menu.active {
@@ -2767,6 +2970,15 @@ button:hover {
 
   .header_list li {
     margin: 0px 0px 20px 0px;
+  }
+
+  .header_icons {
+    z-index: 41;
+    position: fixed;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .heding .slick-slider {
@@ -2795,6 +3007,16 @@ button:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
+  .container-services .service {
+    margin-bottom: 40px;
+  }
+
+  .container-services .service svg,
+  .container-services .service h2,
+  .container-services .service p {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 606px) {
@@ -2820,6 +3042,18 @@ button:hover {
 
   .container-devices img {
     width: 70%;
+  }
+
+  .template-wr,
+  .btn-2 {
+    margin: 0 auto;
+  }
+
+  .wr-filter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

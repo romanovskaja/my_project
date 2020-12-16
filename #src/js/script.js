@@ -5,6 +5,52 @@ $(document).ready(function() {
 });
 });
 
+const overlay1 = document.querySelector('.overlay-1');
+const overlay2 = document.querySelector('.overlay-2');
+const search = document.querySelector('.search');
+const input = document.querySelector('.input');
+overlay1.addEventListener('click', () => {
+  search.classList.toggle('active');
+  if (search.classList.contains('active')) {
+    setTimeout(() => {
+      input.focus();
+    }, 200)
+  }
+})
+search.addEventListener('click', () => {
+  if (search.classList.contains('active')) {
+    setTimeout(() => {
+      input.focus();
+    }, 200)
+  }
+})
+overlay2.addEventListener('click', (e) => {
+  input.value = '';
+  input.focus();
+  search.classList.remove('searching')
+})
+document.body.addEventListener('click', (e) => {
+  if (!search.contains(e.target) && input.value.length === 0) {
+    search.classList.remove('active');
+    search.classList.remove('searching');
+    input.value = '';
+  }
+})
+input.addEventListener('keyup', (e) => {
+  if (e.keyCode === 13) {
+    input.blur();
+  }
+})
+input.addEventListener('input', () => {
+  if (input.value.length > 0) {
+    search.classList.add('searching')
+  } else {
+    search.classList.remove('searching')
+  }
+})
+input.value = '';
+input.blur();
+
 
 $('.slider').slick({
     slidesToShow: 1,
@@ -17,17 +63,71 @@ $('.slider').slick({
 });
 
 
-$('.video__a').on('click', function(e) {
-	e.preventDefault();
-	
-	let self = $(this);
-	let videoSrc = self.attr('href');
-	let videoId = videoSrc.substr(videoSrc.length - 11) + '?rel=0&autoplay=1';
-	
-	self.find('img').css('z-index', '0');
-	self.find('iframe').attr('src', 'https://www.youtube.com/embed/' + videoId);
+document.querySelector('#play').onclick = play
+document.querySelector('#pause').onclick = pause
+document.querySelector('#stop').onclick = stop
+document.querySelector('#speed-up').onclick = speedUp
+document.querySelector('#speed-down').onclick = speedDown
+document.querySelector('#speed-normal').onclick = speedNormal
+document.querySelector('#volume').oninput = videoVolume
 
-});
+let video
+let display
+let progress
+
+video = document.querySelector('#video-player')
+progress = document.querySelector('#progress')
+progress.onclick = videoRewind
+
+video.ontimeupdate = progressUpdate
+
+function play() {
+    video.play()
+}
+
+function pause() {
+    video.pause()
+}
+function stop() {
+    video.pause()
+    video.currentTime = 0
+}
+function speedUp() {
+    video.play()
+    video.playbackRate = 5
+}
+function speedDown() {
+    video.play()
+    video.playbackRate = 0.5
+}
+function speedNormal() {
+    video.play()
+    video.playbackRate = 1
+}
+function videoVolume() {
+    let v = this.value
+    console.log(v)
+    video.volume = v/100
+}
+function progressUpdate () {
+    console.log (video.duration)
+    console.log (video.currentTime)
+    let d = video.duration
+    let c = video.currentTime
+    progress.value = (100*c)/d
+    document.querySelector('#out').innerHTML = video.currentTime
+}
+function videoRewind () {
+    let w = this.offsetWidth
+    let o = event.offsetX
+    console.log (w)
+    console.log (o)
+    this.value = 100*o/w
+    video.pause()
+    video.currentTime = video.duration * (o/w)
+    video.play()
+
+}
 
 let btnsFilterContainer = document.querySelector('.wr-filter');
 
@@ -93,3 +193,8 @@ $('.slider-posts').slick({
 	    }
     ]
 });
+
+$('div.more').hide()
+$('a.showmemore').click(function(){
+$(this).next('div').slideToggle()
+})
