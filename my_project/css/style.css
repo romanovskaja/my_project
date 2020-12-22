@@ -442,6 +442,10 @@ th {
   padding: 0;
 }
 
+.container-wrapper {
+  max-width: 1173px;
+}
+
 .heding {
   background-image: url("../img/photo.jpg");
   height: 100vh;
@@ -456,8 +460,7 @@ th {
      object-fit: cover;
 }
 
-.slick-slider:focus,
-.active {
+.slick-slider:focus {
   outline: none !important;
 }
 
@@ -472,6 +475,8 @@ th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .header_menu {
@@ -491,14 +496,15 @@ th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .header_icons a {
   margin-top: 19px;
+  cursor: pointer;
 }
 
-.btn,
-.btn-2 {
+.btn {
   font-family: "Raleway";
   font-size: 14px;
   font-weight: bold;
@@ -513,24 +519,6 @@ th {
   background-color: #998675;
   -webkit-box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.14);
           box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.14);
-}
-
-.btn-3 {
-  font-family: "Raleway";
-  font-size: 14px;
-  font-weight: bold;
-  display: block;
-  width: 170px;
-  min-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  background-color: #998675;
-  -webkit-box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.14);
-          box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.14);
-  margin: 0 auto;
 }
 
 li {
@@ -539,6 +527,8 @@ li {
 
 a:hover {
   text-decoration: none;
+  cursor: pointer;
+  opacity: .5;
 }
 
 /**
@@ -1602,10 +1592,6 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header-body {
-  max-width: 1173px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1613,9 +1599,7 @@ button.swiper-pagination-bullet {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .header_burger {
@@ -1656,6 +1640,7 @@ button.swiper-pagination-bullet {
 
 .header_list a:hover {
   color: #c7b299;
+  cursor: pointer;
 }
 
 .search {
@@ -1757,6 +1742,7 @@ button.swiper-pagination-bullet {
 
 .overlay:hover {
   background: rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
 
 .search.active .overlay-1 {
@@ -1816,6 +1802,7 @@ button.swiper-pagination-bullet {
 
 button:hover {
   background-color: #c7b299;
+  cursor: pointer;
 }
 
 .slick-slide {
@@ -1913,7 +1900,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1173px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1922,11 +1908,14 @@ button:hover {
   text-align: center;
   margin-left: 15px;
   margin-right: 15px;
+  max-width: 253px;
 }
 
 .service svg {
   fill: #555555;
   margin-bottom: 30px;
+  width: 49px;
+  height: 49px;
 }
 
 .service h2 {
@@ -1938,16 +1927,15 @@ button:hover {
   color: #555555;
 }
 
-.service p {
+.service span {
   color: #8c8c8c;
   line-height: 1.714;
-  max-width: 253px;
   font-family: "Montserrat";
   font-size: 14px;
   margin-bottom: 30px;
 }
 
-.service span::after {
+.service::after {
   background-color: #f1ede9;
   content: "";
   width: 70px;
@@ -1955,6 +1943,10 @@ button:hover {
   margin: 0 auto;
   display: block;
   margin-top: 25px;
+}
+
+.service:hover {
+  cursor: pointer;
 }
 
 .service:hover svg {
@@ -1965,7 +1957,7 @@ button:hover {
   color: #c7b299;
 }
 
-.service:hover span::after {
+.service:hover::after {
   background-color: #c7b299;
   color: #c7b299;
 }
@@ -1983,7 +1975,6 @@ button:hover {
 }
 
 .ideas .container-ideas {
-  max-width: 1173px;
   margin: 0 auto;
   padding-top: 30px;
 }
@@ -2027,7 +2018,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1173px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2068,16 +2058,25 @@ button:hover {
 }
 
 .template-wr > button > .btn {
-  margin: 0 !important;
+  margin: 0;
 }
 
 .project {
   padding-top: 80px;
   padding-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .project .container-project {
-  max-width: 1173px;
   margin: 0 auto;
 }
 
@@ -2117,10 +2116,6 @@ button:hover {
   outline: none;
 }
 
-.project .wr-filter .btn-3 {
-  margin: 0 auto;
-}
-
 .project button #all,
 .project #v1,
 .project #v2,
@@ -2148,6 +2143,7 @@ button:hover {
 .project span:hover {
   color: #fff;
   background-color: #998675;
+  cursor: pointer;
 }
 
 .wrapper-photography {
@@ -2174,8 +2170,16 @@ button:hover {
   margin-bottom: 30px;
 }
 
-.name-photo {
-  margin-left: 30px;
+.wrapper-photography .wr-blocks .block-photo {
+  width: 371px;
+  height: 236px;
+}
+
+.wrapper-photography .wr-blocks .block-photo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .name-photo h3 {
@@ -2183,7 +2187,6 @@ button:hover {
   font-family: "Raleway";
   color: #c7b299;
   margin-bottom: 0px;
-  margin-top: 20px;
 }
 
 .name-photo h4 {
@@ -2191,7 +2194,6 @@ button:hover {
   font-family: "Montserrat";
   color: #d1d1d1;
   margin-top: 10px;
-  margin-bottom: 30px;
 }
 
 .block {
@@ -2227,6 +2229,12 @@ button:hover {
 
 .block:hover {
   background-color: #4e3427;
+  cursor: pointer;
+}
+
+.block:hover img {
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
 }
 
 .block:hover h3 {
@@ -2239,10 +2247,12 @@ button:hover {
 
 .block:hover::before {
   display: inline;
+  cursor: pointer;
 }
 
 .block:hover::after {
   display: inline;
+  cursor: pointer;
 }
 
 .hide {
@@ -2252,6 +2262,8 @@ button:hover {
 .video {
   background-image: url("../img/video.jpg");
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 .video h3 {
@@ -2277,7 +2289,6 @@ button:hover {
 }
 
 .container-video {
-  max-width: 1173px;
   text-align: center;
   margin: 0 auto;
   padding-top: 5vh;
@@ -2331,7 +2342,6 @@ progress {
 
 .devices .container-devices {
   margin: 0 auto;
-  max-width: 1173px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2340,17 +2350,12 @@ progress {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: -5vh;
-}
-
-.devices img {
-  margin-top: 80px;
-  margin-bottom: -5px;
+  padding-top: 80px;
 }
 
 .devices .wrapper-text {
   max-width: 660px;
-  margin-top: 194px;
+  padding-top: 100px;
 }
 
 .devices .wrapper-text h2 {
@@ -2413,7 +2418,6 @@ progress {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1173px;
 }
 
 .statistic-wr .statistic-list {
@@ -2450,7 +2454,7 @@ progress {
   text-align: center;
 }
 
-.statistic-wr .statistic-list span::after {
+.statistic-wr .statistic-list::after {
   background-color: #f1ede9;
   content: "";
   width: 30px;
@@ -2475,7 +2479,6 @@ progress {
 
 .posts .container-posts {
   margin-top: 80px;
-  max-width: 1173px;
   margin: 0 auto;
   margin-bottom: 140px;
 }
@@ -2520,7 +2523,7 @@ progress {
   height: 22px;
   width: 22px;
   top: auto;
-  left: 48%;
+  left: 47%;
   bottom: -80px;
 }
 
@@ -2529,7 +2532,7 @@ progress {
   height: 22px;
   width: 22px;
   top: auto;
-  right: 48%;
+  right: 47%;
   bottom: -80px;
 }
 
@@ -2562,16 +2565,26 @@ progress {
 
 .slider-posts .wrapper-posts svg {
   fill: #c7b299;
+  width: 5px;
+  height: 10px;
 }
 
 .slider-posts .photo-posts {
   background-color: #fbfaf8;
   position: relative;
-  max-width: 370px;
+  width: 373px;
 }
 
-.slider-posts .photo-posts img {
+.slider-posts .photo-posts .wr-photo {
+  width: 373px;
+  height: 225px;
+}
+
+.slider-posts .photo-posts .wr-photo img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 .slider-posts .photo-posts .more {
@@ -2589,7 +2602,7 @@ progress {
 }
 
 .wr-text {
-  margin: 25px 30px 27px 30px;
+  margin: 25px 30px;
 }
 
 .wr-text h3 {
@@ -2608,6 +2621,7 @@ progress {
 
 .photo-posts:hover {
   background-color: #4e3427;
+  cursor: pointer;
 }
 
 .photo-posts:hover h3 {
@@ -2620,6 +2634,7 @@ progress {
 
 .photo-posts:hover .photo-posts::after {
   content: url("../img/datehover.png");
+  cursor: pointer;
 }
 
 .btn-slider {
@@ -2640,7 +2655,6 @@ progress {
 
 .logos .container-logos {
   min-height: 490px;
-  max-width: 1173px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2653,13 +2667,17 @@ progress {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 0;
 }
 
 .logos .container-logos li {
   width: 210px;
   height: 210px;
-  margin-top: 30px;
-  margin-right: 50px;
+  margin: 15px 25px;
+}
+
+.logos .container-logos li:hover {
+  opacity: .5;
 }
 
 .wrapper-footer {
@@ -2667,7 +2685,6 @@ progress {
 }
 
 .wrapper-footer .container-footer {
-  max-width: 1173px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2678,10 +2695,6 @@ progress {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 94px;
-}
-
-.wrapper-footer hr {
-  background-color: #595f6f;
 }
 
 .waxom {
@@ -2717,18 +2730,11 @@ progress {
   margin-left: 8px;
 }
 
-.resent-post,
-.our-twitter {
+.news-content {
   max-width: 270px;
 }
 
-.resent-post a,
-.our-twitter a {
-  text-decoration: none;
-}
-
-.resent-post h3,
-.our-twitter h3 {
+.news-content h3 {
   font-size: 24px;
   font-family: "Raleway";
   color: white;
@@ -2736,15 +2742,7 @@ progress {
   line-height: 1.2;
 }
 
-.resent-post span,
-.our-twitter span {
-  font-size: 12px;
-  font-family: "Montserrat";
-  color: #363636;
-  line-height: 1.667;
-}
-
-.resent-post p {
+.news-content p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2759,16 +2757,24 @@ progress {
   font-family: "Montserrat";
   color: #555555;
   line-height: 1.429;
+  word-break: break-all;
 }
 
-.our-twitter p {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 14px;
+.news-content p span {
+  font-size: 12px;
   font-family: "Montserrat";
-  color: #555555;
-  line-height: 1.429;
-  padding: 0;
+  color: #363636;
+  line-height: 1.667;
+}
+
+.news-content .line {
+  border: 1px solid;
+  width: 270px;
+  height: 1px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
+  background-color: #595f6f;
 }
 
 .dribbble-widget {
@@ -2800,7 +2806,6 @@ progress {
 }
 
 .copyright .container-copyright {
-  max-width: 1173px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2819,15 +2824,16 @@ progress {
 
 .copyright-left,
 .copyright-right {
-  margin-top: 45px;
   font-size: 13px;
   font-family: "Montserrat";
   color: #555555;
   line-height: 1.538;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 1080px) {
-  .header-body {
+  .container-castom {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2856,11 +2862,11 @@ progress {
     overflow: hidden;
   }
 
-  .header-body {
+  .container-castom {
     height: 50px;
   }
 
-  .header-body .logo {
+  .container-castom .logo {
     position: fixed;
     top: 5px;
     left: 20px;
@@ -2872,7 +2878,7 @@ progress {
     margin-top: 10px;
   }
 
-  .header-body .logo img {
+  .container-castom .logo img {
     width: 70%;
   }
 
@@ -2979,6 +2985,7 @@ progress {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    cursor: pointer;
   }
 
   .heding .slick-slider {
@@ -3012,7 +3019,12 @@ progress {
     margin-bottom: 40px;
   }
 
-  .container-services .service svg,
+  .container-services .service svg {
+    margin-bottom: 0;
+    width: 49px;
+    height: 49px;
+  }
+
   .container-services .service h2,
   .container-services .service p {
     margin-bottom: 0;
@@ -3045,7 +3057,7 @@ progress {
   }
 
   .template-wr,
-  .btn-2 {
+  .btn {
     margin: 0 auto;
   }
 
@@ -3150,9 +3162,8 @@ progress {
     margin: 0 auto;
   }
 
-  .our-twitter,
-  .dribbble-widget,
-  .resent-post {
+  .news-content,
+  .dribbble-widget {
     margin: 0 auto;
     margin-top: 20px;
   }
