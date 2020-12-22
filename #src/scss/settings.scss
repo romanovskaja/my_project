@@ -14,7 +14,7 @@
     object-fit: cover;
 }
 
-.slick-slider:focus {
+.slider_item:focus {
         outline: none !important;
     }
 
@@ -69,4 +69,12 @@ a:hover {
     cursor: pointer;
     opacity: .5;
 
+}
+
+.wrapper-posts:focus {
+    outline: none !important;
+
+} 
+.showmore:focus {
+    outline: none !important;
 }

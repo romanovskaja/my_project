@@ -460,7 +460,7 @@ th {
      object-fit: cover;
 }
 
-.slick-slider:focus {
+.slider_item:focus {
   outline: none !important;
 }
 
@@ -529,6 +529,14 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
   opacity: .5;
+}
+
+.wrapper-posts:focus {
+  outline: none !important;
+}
+
+.showmore:focus {
+  outline: none !important;
 }
 
 /**
@@ -1357,7 +1365,7 @@ button.swiper-pagination-bullet {
 @font-face {
   font-family: "slick";
   src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal;
 }
