@@ -87,10 +87,8 @@ cursor: pointer;
 
 
 .search {
-    position: relative;
+    position: absolute;
     width: 300px;
-    margin-left: -29vh;
-    padding-top: 20px;
     
   }
   .magnifying-glass {
@@ -98,6 +96,10 @@ cursor: pointer;
     transform: translateX(40%);
     transition: transform 500ms;
     fill: white;
+  }
+  svg:not(:root) {
+    left: -81px;
+    // top: -7px;
   }
   .search.active .magnifying-glass {
     transform: translateX(-7%);
@@ -123,6 +125,8 @@ cursor: pointer;
     stroke:#fff;
     transition: stroke-dashoffset 500ms;
     visibility: hidden;
+    top: -7px;
+    position: absolute;
   }
   .search.active .x {
     visibility: visible;
@@ -131,12 +135,12 @@ cursor: pointer;
     stroke-dashoffset: 0;
   }
   .input {
+    font-size: 14px;
+    font-family: "Montserrat";
     border: 0;
-    font-size: 1.2em;
     left: 20px;
     outline: 0 !important;
     position: absolute;
-    top: 4px;
     background: transparent;
   }
   .overlay {
@@ -148,15 +152,15 @@ cursor: pointer;
   }
   .overlay-1 {
     height: 64px;
-    left: 110px;
-    top: -10px;
+    left: 21px;
+    top: -22px;
     width: 64px;
   }
   .overlay-2 {
-    height: 38px;
-    left: 240px;
-    top: 0px;
-    width: 38px;
+    height: 64px;
+    left: 147px;
+    top: -13px;
+    width: 64px;
   }
   .overlay:hover {
     background: rgba(0,0,0,0.08);
@@ -589,76 +593,119 @@ span {
 .hide {
     display: none;
 }
-
-.video {
+.wr-video {
     background-image: url("../img/video.jpg");
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-
-        h3 {
-            font-size: 30px;
-            font-family: "Raleway";
-            color: rgb(255, 255, 255);
-            line-height: 1.2;
-            }
-        p {
-        max-width: 553px;
-        font-size: 16px;
-        font-family: "Montserrat";
-        color: rgb(255, 255, 255);
-        line-height: 1.75;
+    padding: 200px 0;
+    .container-video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 552px;
         margin: 0 auto;
+        text-align: center;
+        h3 {
+        font-size: 30px;
+        font-family: "Raleway";
+        color: rgb(255, 255, 255);
         }
-    
-    span {
-        font-size: 14px;
-        font-family: "Montserrat";
-        color: rgb(199, 178, 153);
-    }
-}
-.container-video {
-    text-align: center;
-    margin: 0 auto;
-    padding-top:5vh;
-    padding-bottom: 5vh;
-    a {
-        position: relative;
-        img {
-            position: absolute;
-            left: 45%;
-            height: 70px;
-            width: 70px;
-            margin-bottom: 40px;
+        p {
+        font-size: 16px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
         }
+        span {
+            font-size: 14px;
+            font-family: "Montserrat";
+            color: rgb(199, 178, 153);
+            }
     }
-    p {
-        margin-bottom: 35px;
-    }
-    
-}
-button{
-    outline-style: none;
-    outline-width: 0px !important;
-    outline-color: none !important;
-    border: none !important;
-  }
-  .container-player {
-    max-width: 100%;
-    position: relative;
-  }
 
-progress {
-    width: 100%;
-    margin: 0 auto;
 }
-.player {
-  position: absolute;
-    bottom: 10px;
-    left: 20%;
-    margin: 0 auto;
-    display: block;
-}
+.video {
+
+    width: 200px;
+    // margin: 0 0 14px;
+    }
+    .video .content {
+    // text-align: left;
+    // border: 1px solid #ccc;
+    // background: #eee;
+    }
+    .video .videor {
+    }
+
+// .video {
+//     background-image: url("../img/video.jpg");
+//     background-repeat: no-repeat;
+//     width: 100%;
+//     height: 100%;
+
+//         h3 {
+//             font-size: 30px;
+//             font-family: "Raleway";
+//             color: rgb(255, 255, 255);
+//             line-height: 1.2;
+//             }
+//         p {
+//         max-width: 553px;
+//         font-size: 16px;
+//         font-family: "Montserrat";
+//         color: rgb(255, 255, 255);
+//         line-height: 1.75;
+//         margin: 0 auto;
+//         }
+    
+//     span {
+//         font-size: 14px;
+//         font-family: "Montserrat";
+//         color: rgb(199, 178, 153);
+//     }
+// }
+// .container-video {
+//     text-align: center;
+//     margin: 0 auto;
+//     padding-top:5vh;
+//     padding-bottom: 5vh;
+//     a {
+//         position: relative;
+//         img {
+//             position: absolute;
+//             left: 45%;
+//             height: 70px;
+//             width: 70px;
+//             margin-bottom: 40px;
+//         }
+//     }
+//     p {
+//         margin-bottom: 35px;
+//     }
+    
+// }
+// button{
+//     outline-style: none;
+//     outline-width: 0px !important;
+//     outline-color: none !important;
+//     border: none !important;
+//   }
+//   .container-player {
+//     max-width: 100%;
+//     position: relative;
+//   }
+
+// progress {
+//     width: 100%;
+//     margin: 0 auto;
+// }
+// .player {
+//   position: absolute;
+//     bottom: 10px;
+//     left: 20%;
+//     margin: 0 auto;
+//     display: block;
+// }
 // .container-time {
 //     // z-index: 50;
 // }

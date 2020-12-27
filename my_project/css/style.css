@@ -500,7 +500,6 @@ th {
 }
 
 .header_icons a {
-  margin-top: 19px;
   cursor: pointer;
 }
 
@@ -1652,10 +1651,8 @@ button.swiper-pagination-bullet {
 }
 
 .search {
-  position: relative;
+  position: absolute;
   width: 300px;
-  margin-left: -29vh;
-  padding-top: 20px;
 }
 
 .magnifying-glass {
@@ -1669,6 +1666,10 @@ button.swiper-pagination-bullet {
   transition: transform 500ms;
   transition: transform 500ms, -webkit-transform 500ms;
   fill: white;
+}
+
+svg:not(:root) {
+  left: -81px;
 }
 
 .search.active .magnifying-glass {
@@ -1704,6 +1705,8 @@ button.swiper-pagination-bullet {
   -o-transition: stroke-dashoffset 500ms;
   transition: stroke-dashoffset 500ms;
   visibility: hidden;
+  top: -7px;
+  position: absolute;
 }
 
 .search.active .x {
@@ -1715,12 +1718,12 @@ button.swiper-pagination-bullet {
 }
 
 .input {
+  font-size: 14px;
+  font-family: "Montserrat";
   border: 0;
-  font-size: 1.2em;
   left: 20px;
   outline: 0 !important;
   position: absolute;
-  top: 4px;
   background: transparent;
 }
 
@@ -1736,16 +1739,16 @@ button.swiper-pagination-bullet {
 
 .overlay-1 {
   height: 64px;
-  left: 110px;
-  top: -10px;
+  left: 21px;
+  top: -22px;
   width: 64px;
 }
 
 .overlay-2 {
-  height: 38px;
-  left: 240px;
-  top: 0px;
-  width: 38px;
+  height: 64px;
+  left: 147px;
+  top: -13px;
+  width: 64px;
 }
 
 .overlay:hover {
@@ -2267,81 +2270,50 @@ button:hover {
   display: none;
 }
 
-.video {
+.wr-video {
   background-image: url("../img/video.jpg");
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  padding: 200px 0;
 }
 
-.video h3 {
+.wr-video .container-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 552px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wr-video .container-video h3 {
   font-size: 30px;
   font-family: "Raleway";
   color: white;
-  line-height: 1.2;
 }
 
-.video p {
-  max-width: 553px;
+.wr-video .container-video p {
   font-size: 16px;
   font-family: "Montserrat";
   color: white;
-  line-height: 1.75;
-  margin: 0 auto;
 }
 
-.video span {
+.wr-video .container-video span {
   font-size: 14px;
   font-family: "Montserrat";
   color: #c7b299;
 }
 
-.container-video {
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-
-.container-video a {
-  position: relative;
-}
-
-.container-video a img {
-  position: absolute;
-  left: 45%;
-  height: 70px;
-  width: 70px;
-  margin-bottom: 40px;
-}
-
-.container-video p {
-  margin-bottom: 35px;
-}
-
-button {
-  outline-style: none;
-  outline-width: 0px !important;
-  outline-color: none !important;
-  border: none !important;
-}
-
-.container-player {
-  max-width: 100%;
-  position: relative;
-}
-
-progress {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.player {
-  position: absolute;
-  bottom: 10px;
-  left: 20%;
-  margin: 0 auto;
-  display: block;
+.video {
+  width: 200px;
 }
 
 .devices {

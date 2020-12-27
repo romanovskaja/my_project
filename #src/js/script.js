@@ -1,3 +1,19 @@
+// ! Menu lazy anchor scroll
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+ anchor.addEventListener('click', function (e) {
+  e.preventDefault()
+
+  const blockID = anchor.getAttribute('href').substr(1)
+
+  document.getElementById(blockID).scrollIntoView({
+   behavior: 'smooth',
+   block: 'start'
+  })
+ })
+}
+
 $(document).ready(function() {
     $('.header_burger').click(function(event) {
         $('.header_burger,.header_menu').toggleClass('active');
@@ -63,71 +79,146 @@ $('.slider').slick({
 });
 
 
-document.querySelector('#play').onclick = play
-document.querySelector('#pause').onclick = pause
-document.querySelector('#stop').onclick = stop
-document.querySelector('#speed-up').onclick = speedUp
-document.querySelector('#speed-down').onclick = speedDown
-document.querySelector('#speed-normal').onclick = speedNormal
-document.querySelector('#volume').oninput = videoVolume
+let base = {
+	// Поиск элементов по классу
+	findClass: function(str, node) {
+		 if(document.getElementsByClassName) return (node || document).getElementsByClassName(str);
+		 else {
+			  let node = node || document, list = node.getElementsByTagName('*'), length = list.length, Class = str.split(/\s+/), classes = Class.length, array = [], i, j, key;
+			  for(i = 0; i < length; i++) {
+					key = true;
+					for(j = 0; j < classes; j++) if(list[i].className.search('\\b' + Class[j] + '\\b') == -1) key = false;
+					if(key) array.push(list[i]);
+			  }
+			  return array;
+		 }
+	},
+	// Добавление обработчиков событий
+	bind: function(node, type, listener) {
+		if(node.addEventListener) node.addEventListener(type, listener, false);
+		//@cc_on node.attachEvent('on' + type, function() { listener.call(node); });
+	},
+	// Реализация DOMContentLoaded
+	init: [],
+	ready: function() {
+		if(!arguments.callee.done) {
+			arguments.callee.done = true;
+			if(this.timer) clearInterval(this.timer);
+			let i, length = this.init.length;
+			for(i = 0; i < length; i++) this.init[i]();
+			this.init = [];
+		}
+	},
+	check: function() {
+		let _this = this, listener = function() {
+			_this.ready();
+		};
+		if(document.addEventListener) document.addEventListener('DOMContentLoaded', listener, false);
+		if(/KHTML|WebKit/i.test(navigator.userAgent)) this.timer = setInterval(function() {
+			if(/loaded|complete/.test(document.readyState)) base.ready();
+		}, 10);
+		/*@cc_on document.write(unescape('%3CSCRIPT onreadystatechange="if(this.readyState==\'complete\') base.ready()" defer=defer src=\/\/:%3E%3C/SCRIPT%3E')); @*/
+		this.bind(window, 'load', listener);
+	}
+};
 
-let video
-let display
-let progress
+// Функции для работы с панельками
+let videor = {
+	process: function() {
+		let i, list = base.findClass('videor'), length = list.length;
+		for(i = 0; i < length; i++) base.bind(list[i], 'click', this.video);
+		list = base.findClass('content');
+		length = list.length;
+		for(i = 0; i < length; i++) list[i].style.display = 'none';
+	},
+	video: function() {
+		let content = base.findClass('content', this.parentNode)[0], e = arguments[0] || window.event;
+		if(content.style.display == 'block') {
+			content.style.display = 'none';
+			this.innerHTML = 'show';
+		}
+		else {
+			content.style.display = 'block';
+			this.innerHTML = 'close';
+		}
+		e.preventDefault ? e.preventDefault() : e.returnValue = false;
+	}
+};
 
-video = document.querySelector('#video-player')
-progress = document.querySelector('#progress')
-progress.onclick = videoRewind
+// Ищем блоки с классом «video» по событию DOMContentLoaded
+base.init.push(function() {
+	videor.process();
+});
 
-video.ontimeupdate = progressUpdate
+// Запускаем проверку готовности DOM
+base.check();
 
-function play() {
-    video.play()
-}
 
-function pause() {
-    video.pause()
-}
-function stop() {
-    video.pause()
-    video.currentTime = 0
-}
-function speedUp() {
-    video.play()
-    video.playbackRate = 5
-}
-function speedDown() {
-    video.play()
-    video.playbackRate = 0.5
-}
-function speedNormal() {
-    video.play()
-    video.playbackRate = 1
-}
-function videoVolume() {
-    let v = this.value
-    console.log(v)
-    video.volume = v/100
-}
-function progressUpdate () {
-    console.log (video.duration)
-    console.log (video.currentTime)
-    let d = video.duration
-    let c = video.currentTime
-    progress.value = (100*c)/d
-    document.querySelector('#out').innerHTML = video.currentTime
-}
-function videoRewind () {
-    let w = this.offsetWidth
-    let o = event.offsetX
-    console.log (w)
-    console.log (o)
-    this.value = 100*o/w
-    video.pause()
-    video.currentTime = video.duration * (o/w)
-    video.play()
+// document.querySelector('#play').onclick = play
+// document.querySelector('#pause').onclick = pause
+// document.querySelector('#stop').onclick = stop
+// document.querySelector('#speed-up').onclick = speedUp
+// document.querySelector('#speed-down').onclick = speedDown
+// document.querySelector('#speed-normal').onclick = speedNormal
+// document.querySelector('#volume').oninput = videoVolume
 
-}
+// let video
+// let display
+// let progress
+
+// video = document.querySelector('#video-player')
+// progress = document.querySelector('#progress')
+// progress.onclick = videoRewind
+
+// video.ontimeupdate = progressUpdate
+
+// function play() {
+//     video.play()
+// }
+
+// function pause() {
+//     video.pause()
+// }
+// function stop() {
+//     video.pause()
+//     video.currentTime = 0
+// }
+// function speedUp() {
+//     video.play()
+//     video.playbackRate = 5
+// }
+// function speedDown() {
+//     video.play()
+//     video.playbackRate = 0.5
+// }
+// function speedNormal() {
+//     video.play()
+//     video.playbackRate = 1
+// }
+// function videoVolume() {
+//     let v = this.value
+//     console.log(v)
+//     video.volume = v/100
+// }
+// function progressUpdate () {
+//     console.log (video.duration)
+//     console.log (video.currentTime)
+//     let d = video.duration
+//     let c = video.currentTime
+//     progress.value = (100*c)/d
+//     document.querySelector('#out').innerHTML = video.currentTime
+// }
+// function videoRewind () {
+//     let w = this.offsetWidth
+//     let o = event.offsetX
+//     console.log (w)
+//     console.log (o)
+//     this.value = 100*o/w
+//     video.pause()
+//     video.currentTime = video.duration * (o/w)
+//     video.play()
+
+// }
 
 let btnsFilterContainer = document.querySelector('.wr-filter');
 

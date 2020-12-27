@@ -13,7 +13,7 @@
 <div class="heding">
     <header class="header">
         <div class=" container-wrapper container-castom">
-                <a href="./index.html" class="logo"><img src="./img/logos.png" alt="logo">Waxom</a>
+                <a href="./index.html" class="logo" id="logo"><img src="./img/logos.png" alt="logo">Waxom</a>
                 <div class="header_burger">
                 <span></span>
                 </div>
@@ -22,19 +22,19 @@
                         <li>
                             <a href="#">Home</a></li>
                         <li>
-                            <a href="#">About Us</a></li>
+                            <a href="#aboutus">About Us</a></li>
                         <li>
-                            <a href="#">Portfolio</a></li>
+                            <a href="#portfolio">Portfolio</a></li>
                         <li>
-                            <a href="#">Features</a></li>
+                            <a href="#features">Features</a></li>
                         <li>
-                            <a href="#">Blog</a></li>
+                            <a href="#blog">Blog</a></li>
                         <li>
-                            <a href="#">Pricing</a></li>
+                            <a href="#pricing">Pricing</a></li>
                         <li>
-                            <a href="#">Shortcodes</a></li>
+                            <a href="#shortcodes">Shortcodes</a></li>
                         <li>
-                            <a href="#">Contact</a></li>
+                            <a href="#contact">Contact</a></li>
                     </ul>                   
                 </nav>
                 <div class="header_icons">
@@ -104,7 +104,7 @@
             </div>
         </section>
 </div>   
-<section class="services">
+<section id="aboutus" class="services">
     <div class="container-wrapper container-services">
     <div class="service">
     <svg viewBox="0 0 49 49">
@@ -132,13 +132,13 @@
     </div>
 </div>
 </section>
-<section class="ideas">
+<section id="features" class="ideas">
     <div class="container-wrapper container-ideas">
  <h2>Waxom is Realization of your Ideas.</h2>
  <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
 </div>
 </section>
-<section class="template">
+<section id="blog" class="template">
     <div class="container-wrapper container-template">
         <div class="template-wr">
             <h2>Waxom <span>Multipurpose WordPress Theme</span> </h2>
@@ -149,7 +149,7 @@
 </section>
 <section class="project">
     <div class="container-wrapper container-project">
-        <h2>Our Latest Projects.</h2>
+        <h2 id="portfolio">Our Latest Projects.</h2>
         <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
         <div class="wr-filter">
             <button class="active" id="all"><span>All</span></button>
@@ -215,7 +215,19 @@
         <button class="btn">Load More</button>
     </div>
 </section>
-<section class="video">
+<section class="wr-video">
+    <div class="container-video">
+<div class="video">
+    <div class="content">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/q4ct04Pr0XM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <a href="#" class="videor"><img src="./img/PlayVideo.png" alt="play"></a>
+</div>
+<h3>Waxom Video Presentation</h3>
+<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
+<span>03:26</span>
+</div>
+</section>
+<!-- <section class="video">
     <div class="container-wrapper container-video">
         <div class="container-player">
             <video poster="" id="video-player">
@@ -236,7 +248,7 @@
                     <input type="range" id="volume" min=0 max=100><img src="./img/volume.png">
                 </div>
             </div>
-        </div>
+        </div> -->
     <!-- <div class="container-time">
         <img class="playvideo" src="./img/PlayVideo.png" alt="playvideo">
         <h3>Waxom Video Presentation</h3>
@@ -260,7 +272,7 @@
         </div>
     </div>
 </section>
-<section class="statistic">
+<section id="shortcodes" class="statistic">
     <div class="container-wrapper statistic-wr">
         <div class="statistic-list">
             <img src="./img/icon-satisfied.svg" alt="satisfied">
@@ -291,7 +303,7 @@
     </div>
 </div>
 </section>
-<section class="posts">
+<section id="pricing" class="posts">
     <div class="container-wrapper container-posts">
     <h2>Recent Posts.</h2>
     <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
@@ -409,7 +421,7 @@
     <section class="wrapper-footer">
         <div class="container-wrapper container-footer">
         <div class="waxom">
-            <a  class="logo-end" href="#"><img src="./img/logos.png" alt="logo">Waxom</a>
+            <a  class="logo-end" href="#logo"><img src="./img/logos.png" alt="logo">Waxom</a>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
         </p>
         <a href="#">Read More<img src="./img/arrow-readmore.svg" alt="readmore"></a>
@@ -463,7 +475,7 @@
         </div>
     </div>
     </section>
-    <section class="copyright">
+    <section id="contact" class="copyright">
         <div class="container-wrapper container-copyright">
         <div class="copyright-left">
             <p>Copyright © 2015
