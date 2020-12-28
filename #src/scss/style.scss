@@ -1209,7 +1209,7 @@ span {
 
     .header_burger {
         display: block;
-        top: 20px;
+        top: 28px;
         right: 10%;
         position: fixed;
         width: 30px;
@@ -1295,6 +1295,7 @@ span {
         margin: 0 auto;
         display: flex;
         cursor: pointer;
+        top: 28px;
     }
 
   
@@ -1329,7 +1330,21 @@ span {
             }
         }
     }
+    .photo-posts {
+        width: 200px;
+        .wr-photo {
+            width: 200px;
+            height: 180px;
+        }
+    }
+    .container-logos {
+        flex-direction: column;
+    }
+    .waxom, .news-content, .dribbble-widget {
+        margin: 0 auto;
+    }
 }
+
 
 @media (max-width:606px) {
 
@@ -1355,10 +1370,24 @@ span {
         }
         .template-wr, .btn {
             margin: 0 auto;
+            max-width: 400px;
         }
         .wr-filter {
             flex-direction: column;
         }
+        .container-ideas {
+            max-width: 500px;
+        }
+        .container-project {
+            max-width: 500px;
+        }
+        .wrapper-text {
+        padding-top: 10px;
+        p {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+    }
 }
 
 @media (max-width:430px) {
