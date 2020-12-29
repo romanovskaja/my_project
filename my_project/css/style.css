@@ -2294,6 +2294,11 @@ button:hover {
   text-align: center;
 }
 
+.wr-video .container-video iframe {
+  width: 560px;
+  height: 315px;
+}
+
 .wr-video .container-video h3 {
   font-size: 30px;
   font-family: "Raleway";
@@ -2899,6 +2904,28 @@ button:hover {
   .slider-posts .slick-next {
     right: 40%;
   }
+
+  .wr-video {
+    padding: 0;
+  }
+
+  .photo-posts {
+    width: 200px;
+  }
+
+  .photo-posts .wr-photo {
+    width: 200px;
+    height: 180px;
+  }
+
+  .container-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .copyright {
+    padding: 10px 20px 10px 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2933,7 +2960,7 @@ button:hover {
     position: fixed;
     width: 30px;
     height: 20px;
-    z-index: 41;
+    z-index: 42;
   }
 
   .header_burger span {
@@ -3075,15 +3102,6 @@ button:hover {
     margin-bottom: 0;
   }
 
-  .photo-posts {
-    width: 200px;
-  }
-
-  .photo-posts .wr-photo {
-    width: 200px;
-    height: 180px;
-  }
-
   .container-logos {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3113,6 +3131,7 @@ button:hover {
 
   .slider-wrapper h2 {
     max-width: 300px;
+    margin-bottom: 20px;
   }
 
   .slider-wrapper p {
@@ -3213,8 +3232,20 @@ button:hover {
     margin-bottom: 20px;
   }
 
+  .slider-posts .wrapper-posts {
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+  }
+
   .wr-text {
     margin: 3px;
+  }
+
+  iframe {
+    width: 300px;
+    height: 200px;
   }
 
   .slider-posts .photo-posts::after {
@@ -3222,7 +3253,7 @@ button:hover {
   }
 
   .container-logos img {
-    width: 40%;
+    width: 100%;
   }
 
   .photo-posts p {
@@ -3255,7 +3286,36 @@ button:hover {
 }
 
 @media (max-width: 320px) {
+  .header_burger {
+    right: 20%;
+  }
+
   .wrapper-photography img {
     display: none;
+  }
+
+  .header_icons {
+    top: 52px;
+    left: 100px;
+  }
+
+  .project .wr-filter {
+    max-width: 300px;
+    margin: 0 auto;
+    display: grid;
+  }
+
+  .wrapper-photography .wr-blocks .block-photo {
+    width: 100%;
+    height: 0;
+  }
+
+  .photo-posts {
+    width: 100px;
+  }
+
+  .photo-posts .wr-photo {
+    width: 100px;
+    height: 80px;
   }
 }
