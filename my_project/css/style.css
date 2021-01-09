@@ -2134,13 +2134,10 @@ button:hover {
   margin: 0 auto;
   border: none;
   outline: none;
+  background-color: #998675;
 }
 
-.project button .active #all,
-.project #v1,
-.project #v2,
-.project #v3,
-.project #v4 {
+.project button .filter-btn {
   margin-right: 10px;
   border: none;
   border-radius: 5px;
@@ -2161,17 +2158,13 @@ button:hover {
 .project html input[type=button],
 .project input[type=reset],
 .project input[type=submit] {
-  background-color: #998675;
   color: #fff;
   padding: 10px 20px;
   margin-right: 10px;
 }
 
-.project button #all:hover,
-.project #v1:hover,
-.project #v2:hover,
-.project #v3:hover,
-.project #v4:hover {
+.project button .filter-btn:hover,
+.project .active {
   color: #fff;
   background-color: #998675;
   cursor: pointer;

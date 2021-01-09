@@ -471,11 +471,11 @@ span {
             margin: 0 auto;
             border: none;
             outline: none;
-
+            background-color: #998675;
         }
     }
     
-    button .active #all, #v1, #v2, #v3, #v4 {
+    button .filter-btn {
         margin-right: 10px;
         border: none;
         border-radius: 5px;
@@ -493,13 +493,13 @@ span {
         }
 
         button, html input[type=button], input[type=reset], input[type=submit] {
-            background-color: #998675;
+            // background-color: #998675;
             color: #fff;
             padding: 10px 20px;
             margin-right: 10px;
         }
 
-        button #all:hover, #v1:hover, #v2:hover, #v3:hover, #v4:hover {
+        button .filter-btn:hover, .active {
         color: #fff;
         background-color: #998675;
         cursor: pointer;
