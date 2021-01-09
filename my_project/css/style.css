@@ -464,6 +464,14 @@ th {
   outline: none !important;
 }
 
+button:focus,
+.project button,
+.project html input[type=button],
+.project input[type=reset],
+.project input[type=submit]:focus {
+  outline: none !important;
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2094,6 +2102,7 @@ button:hover {
 .project h2 {
   font-size: 30px;
   font-family: "Raleway";
+  font-weight: 400;
   color: #555555;
   text-align: center;
   margin: 0 auto;
@@ -2127,7 +2136,7 @@ button:hover {
   outline: none;
 }
 
-.project button #all,
+.project button .active #all,
 .project #v1,
 .project #v2,
 .project #v3,
@@ -2136,9 +2145,6 @@ button:hover {
   border: none;
   border-radius: 5px;
   background-color: white;
-}
-
-.project span {
   font-size: 14px;
   font-family: "Montserrat";
   font-weight: bold;
@@ -2151,7 +2157,21 @@ button:hover {
   border-radius: 3px;
 }
 
-.project span:hover {
+.project button,
+.project html input[type=button],
+.project input[type=reset],
+.project input[type=submit] {
+  background-color: #998675;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.project button #all:hover,
+.project #v1:hover,
+.project #v2:hover,
+.project #v3:hover,
+.project #v4:hover {
   color: #fff;
   background-color: #998675;
   cursor: pointer;
@@ -2197,6 +2217,7 @@ button:hover {
   font-size: 20px;
   font-family: "Raleway";
   color: #c7b299;
+  padding-left: 30px;
   margin-bottom: 0px;
 }
 
@@ -2204,6 +2225,7 @@ button:hover {
   font-size: 14px;
   font-family: "Montserrat";
   color: #d1d1d1;
+  padding-left: 30px;
   margin-top: 10px;
 }
 
@@ -2338,6 +2360,10 @@ button:hover {
   padding-top: 80px;
 }
 
+.devices .container-devices img {
+  margin-bottom: -4px;
+}
+
 .devices .wrapper-text {
   max-width: 660px;
   padding-top: 100px;
@@ -2378,8 +2404,8 @@ button:hover {
 
 .text-devices li::before {
   content: "\003E";
-  width: 19px;
-  height: 19px;
+  width: 21px;
+  height: 21px;
   text-align: center;
   display: inline-block;
   background: #c7b299;

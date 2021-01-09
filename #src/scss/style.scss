@@ -447,6 +447,7 @@ span {
     h2 {
         font-size: 30px;
         font-family: "Raleway";
+        font-weight: 400;
         color: rgb(85, 85, 85);
         text-align: center;
         margin: 0 auto;
@@ -474,14 +475,11 @@ span {
         }
     }
     
-    button #all, #v1, #v2, #v3, #v4 {
+    button .active #all, #v1, #v2, #v3, #v4 {
         margin-right: 10px;
         border: none;
         border-radius: 5px;
-        background-color: white;   
-        }
-
-    span {
+        background-color: white;  
         font-size: 14px;
         font-family: "Montserrat";
         font-weight: bold;
@@ -492,8 +490,16 @@ span {
         text-align: center;
         border: 1px solid rgb(235, 235, 235);
         border-radius: 3px;  
-    }
-    span:hover {
+        }
+
+        button, html input[type=button], input[type=reset], input[type=submit] {
+            background-color: #998675;
+            color: #fff;
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+
+        button #all:hover, #v1:hover, #v2:hover, #v3:hover, #v4:hover {
         color: #fff;
         background-color: #998675;
         cursor: pointer;
@@ -530,12 +536,14 @@ span {
             font-size: 20px;
             font-family: "Raleway";
             color: rgb(199, 178, 153);
+            padding-left: 30px;
             margin-bottom: 0px;
             }
             h4 {
             font-size: 14px;
             font-family: "Montserrat";
             color: rgb(209, 209, 209);
+            padding-left: 30px;
             margin-top: 10px;
             }
         }
@@ -729,6 +737,9 @@ span {
         justify-content: center;
         flex-wrap: wrap;
         padding-top: 80px;
+        img {
+            margin-bottom: -4px;
+        }
     }
     .wrapper-text {
         max-width: 660px;
@@ -760,9 +771,10 @@ span {
     }
 }
 .text-devices li::before {
-    content: "\003E";
-    width: 19px;
-    height: 19px;
+    content:"\003E";
+    // background-image: url("../img/arrowsn7.svg");
+    width: 21px;
+    height: 21px;
     text-align: center;
     display: inline-block;
     background: #c7b299;
@@ -773,6 +785,7 @@ span {
     margin-right: 15px;
     top: 2px;
     left: 0;
+ 
 }
 .statistic {
     display: flex;
