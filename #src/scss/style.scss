@@ -483,23 +483,25 @@ span {
         font-size: 14px;
         font-family: "Montserrat";
         font-weight: bold;
-        color: rgb(140, 140, 140);
+        color:#998675;
         line-height: 1.5;
         display: block;
         padding: 10px 20px;
         text-align: center;
-        border: 1px solid rgb(235, 235, 235);
+        border: none;
         border-radius: 3px;  
         }
 
         button, html input[type=button], input[type=reset], input[type=submit] {
             // background-color: #998675;
-            color: #fff;
+            // color: #fff;
             padding: 10px 20px;
             margin-right: 10px;
+            border: none;
+
         }
 
-        button .filter-btn:hover, .active {
+        .filter-btn:hover, .active {
         color: #fff;
         background-color: #998675;
         cursor: pointer;
@@ -602,22 +604,28 @@ span {
     display: none;
 }
 .wr-video {
-    background-image: url("../img/video.jpg");
-    background-repeat: no-repeat;
+    position: relative;
+
+}
+.container-player {
+    // background-image: url("../img/video.jpg");
+    // background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
-    padding: 200px 0;
-    .container-video {
-        iframe {
-            width: 560px;
-            height: 315px;
-        }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 552px;
-        margin: 0 auto;
-        text-align: center;
+
+    object-fit: cover;
+    // height: 100%;
+    // padding: 200px 0;
+    // .container-video {
+    //     iframe {
+    //         width: 560px;
+    //         height: 315px;
+    //     }
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     max-width: 552px;
+    //     margin: 0 auto;
+    //     text-align: center;
         h3 {
         font-size: 30px;
         font-family: "Raleway";
@@ -633,100 +641,13 @@ span {
             font-family: "Montserrat";
             color: rgb(199, 178, 153);
             }
-    }
-
 }
-.video {
-
-    width: 200px;
-    // margin: 0 0 14px;
-    }
-    .video .content {
-    // text-align: left;
-    // border: 1px solid #ccc;
-    // background: #eee;
-    }
-    .video .videor {
-    }
-
-// .video {
-//     background-image: url("../img/video.jpg");
-//     background-repeat: no-repeat;
-//     width: 100%;
-//     height: 100%;
-
-//         h3 {
-//             font-size: 30px;
-//             font-family: "Raleway";
-//             color: rgb(255, 255, 255);
-//             line-height: 1.2;
-//             }
-//         p {
-//         max-width: 553px;
-//         font-size: 16px;
-//         font-family: "Montserrat";
-//         color: rgb(255, 255, 255);
-//         line-height: 1.75;
-//         margin: 0 auto;
-//         }
-    
-//     span {
-//         font-size: 14px;
-//         font-family: "Montserrat";
-//         color: rgb(199, 178, 153);
-//     }
-// }
-// .container-video {
-//     text-align: center;
-//     margin: 0 auto;
-//     padding-top:5vh;
-//     padding-bottom: 5vh;
-//     a {
-//         position: relative;
-//         img {
-//             position: absolute;
-//             left: 45%;
-//             height: 70px;
-//             width: 70px;
-//             margin-bottom: 40px;
-//         }
-//     }
-//     p {
-//         margin-bottom: 35px;
-//     }
-    
-// }
-// button{
-//     outline-style: none;
-//     outline-width: 0px !important;
-//     outline-color: none !important;
-//     border: none !important;
-//   }
-//   .container-player {
-//     max-width: 100%;
-//     position: relative;
-//   }
-
-// progress {
-//     width: 100%;
-//     margin: 0 auto;
-// }
-// .player {
-//   position: absolute;
-//     bottom: 10px;
-//     left: 20%;
-//     margin: 0 auto;
-//     display: block;
-// }
-// .container-time {
-//     // z-index: 50;
-// }
-// .container-video:hover ~ .container-player {
-//         display: block;
-//     }
-// .container-video:hover ~ .container-time {
-//         display: none;
-//     }
+.wr-video-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 .devices {

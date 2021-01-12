@@ -19,6 +19,7 @@
     }
 button:focus, .project button, .project html input[type=button], .project input[type=reset], .project input[type=submit]:focus {
     outline: none !important;
+    border:none;
     }
 
 .logo {
