@@ -98,7 +98,7 @@ cursor: pointer;
     fill: white;
   }
   svg:not(:root) {
-    left: -81px;
+    // left: -81px;
     // top: -7px;
   }
   .search.active .magnifying-glass {
@@ -692,8 +692,8 @@ span {
     }
 }
 .text-devices li::before {
-    content:"\003E";
-    // background-image: url("../img/arrowsn7.svg");
+    content:"";
+    background-image: url("../img/arrowsn7.svg");
     width: 21px;
     height: 21px;
     text-align: center;

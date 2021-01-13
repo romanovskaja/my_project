@@ -1681,10 +1681,6 @@ button.swiper-pagination-bullet {
   fill: white;
 }
 
-svg:not(:root) {
-  left: -81px;
-}
-
 .search.active .magnifying-glass {
   -webkit-transform: translateX(-7%);
       -ms-transform: translateX(-7%);
@@ -2387,7 +2383,8 @@ button:hover {
 }
 
 .text-devices li::before {
-  content: "\003E";
+  content: "";
+  background-image: url("../img/arrowsn7.svg");
   width: 21px;
   height: 21px;
   text-align: center;
