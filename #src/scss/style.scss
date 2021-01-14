@@ -93,7 +93,7 @@ cursor: pointer;
   }
   .magnifying-glass {
     position: relative;
-    transform: translateX(40%);
+    transform: translateX(14%);
     transition: transform 500ms;
     fill: white;
   }
@@ -158,7 +158,7 @@ cursor: pointer;
   }
   .overlay-2 {
     height: 64px;
-    left: 147px;
+    left: 227px;
     top: -13px;
     width: 64px;
   }
@@ -464,6 +464,10 @@ span {
         max-width: 760px;
     }
     .wr-filter {
+        font-size: 14px;
+        font-family: "Montserrat";
+        font-weight: 700;
+        color: rgb(140, 140, 140);
         margin-top: 20px;
         display: flex;
         justify-content: center;
@@ -473,6 +477,7 @@ span {
             outline: none;
             background-color: #998675;
         }
+
     }
     
     button .filter-btn {
@@ -490,7 +495,8 @@ span {
         text-align: center;
         border: none;
         border-radius: 3px;  
-        }
+        
+    }
 
         button, html input[type=button], input[type=reset], input[type=submit] {
             // background-color: #998675;
@@ -498,6 +504,10 @@ span {
             padding: 10px 20px;
             margin-right: 10px;
             border: none;
+            &:last-child {
+                margin-right: 0px;
+    
+            }
 
         }
 
@@ -612,7 +622,7 @@ span {
     // background-repeat: no-repeat;
     width: 100%;
 
-    object-fit: cover;
+    // object-fit: cover;
     // height: 100%;
     // padding: 200px 0;
     // .container-video {
@@ -647,6 +657,31 @@ span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        font-size: 30px;
+        font-family: "Raleway";
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+    p {
+    font-size: 16px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    line-height: 1.714;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+    }
+    span {
+        font-size: 14px;
+        font-family: "Montserrat";
+        color: rgb(199, 178, 153);
+    }
 }
 
 
@@ -689,6 +724,13 @@ span {
         color: rgb(140, 140, 140);
         line-height: 2;
         position: relative;
+        .list-devices {
+            display: block;
+            text-align: center;
+            position: absolute;
+            top: -5px;
+            left: 48px;
+        }
     }
 }
 .text-devices li::before {
@@ -698,7 +740,6 @@ span {
     height: 21px;
     text-align: center;
     display: inline-block;
-    background: #c7b299;
     border-radius: 50%;
     color: #fff;
     line-height: 18px;
@@ -706,8 +747,8 @@ span {
     margin-right: 15px;
     top: 2px;
     left: 0;
- 
 }
+
 .statistic {
     display: flex;
     justify-content: center;

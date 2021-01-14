@@ -531,6 +531,8 @@ button:focus,
 
 video {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 li {
@@ -1670,9 +1672,9 @@ button.swiper-pagination-bullet {
 
 .magnifying-glass {
   position: relative;
-  -webkit-transform: translateX(40%);
-      -ms-transform: translateX(40%);
-          transform: translateX(40%);
+  -webkit-transform: translateX(14%);
+      -ms-transform: translateX(14%);
+          transform: translateX(14%);
   -webkit-transition: -webkit-transform 500ms;
   transition: -webkit-transform 500ms;
   -o-transition: transform 500ms;
@@ -1755,7 +1757,7 @@ button.swiper-pagination-bullet {
 
 .overlay-2 {
   height: 64px;
-  left: 147px;
+  left: 227px;
   top: -13px;
   width: 64px;
 }
@@ -2122,6 +2124,10 @@ button:hover {
 }
 
 .project .wr-filter {
+  font-size: 14px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #8c8c8c;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2162,6 +2168,13 @@ button:hover {
   padding: 10px 20px;
   margin-right: 10px;
   border: none;
+}
+
+.project button:last-child,
+.project html input[type=button]:last-child,
+.project input[type=reset]:last-child,
+.project input[type=submit]:last-child {
+  margin-right: 0px;
 }
 
 .project .filter-btn:hover,
@@ -2292,8 +2305,6 @@ button:hover {
 
 .container-player {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .container-player h3 {
@@ -2321,6 +2332,41 @@ button:hover {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  max-width: 560px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wr-video-btn h3 {
+  font-size: 30px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.wr-video-btn p {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: white;
+  line-height: 1.714;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.wr-video-btn span {
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: #c7b299;
 }
 
 .devices {
@@ -2382,6 +2428,14 @@ button:hover {
   position: relative;
 }
 
+.text-devices li .list-devices {
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: -5px;
+  left: 48px;
+}
+
 .text-devices li::before {
   content: "";
   background-image: url("../img/arrowsn7.svg");
@@ -2389,7 +2443,6 @@ button:hover {
   height: 21px;
   text-align: center;
   display: inline-block;
-  background: #c7b299;
   border-radius: 50%;
   color: #fff;
   line-height: 18px;
