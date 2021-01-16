@@ -83,6 +83,21 @@ a:hover {
     outline: none !important;
 
 } 
+.prev-arrow, .next-arrow {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -81px;
+}
+.prev-arrow {
+    right: 52%;
+}
+
+.next-arrow {
+    left: 52%;
+}
 .showmore:focus {
     outline: none !important;
 }
