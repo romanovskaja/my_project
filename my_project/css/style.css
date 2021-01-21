@@ -549,18 +549,24 @@ a:hover {
   outline: none !important;
 }
 
-.arrows svg .prev slick-arrow {
-  width: 15px;
-  height: 15px;
-  border: 2px solid #998675;
-  border-radius: 50%;
+.arrows {
+  display: block;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85px;
+  height: 50px;
+  margin-top: 42px;
 }
 
-.arrows svg .next slick-arrow {
-  width: 15px;
-  height: 15px;
-  border: 2px solid #998675;
+.arrows svg {
+  width: 21px;
+  height: 21px;
+  border: 3px solid #c7b299;
   border-radius: 50%;
+  stroke: #c7b299;
+  margin: 0 5px 0 5px;
 }
 
 .showmore:focus {
@@ -1681,10 +1687,9 @@ button.swiper-pagination-bullet {
 
 .search {
   position: absolute;
-  width: 300px;
 }
 
-.magnifying-glass {
+.search .magnifying-glass {
   position: relative;
   -webkit-transform: translateX(14%);
       -ms-transform: translateX(14%);
@@ -1697,10 +1702,14 @@ button.swiper-pagination-bullet {
   fill: white;
 }
 
+.search svg {
+  width: 300px;
+}
+
 .search.active .magnifying-glass {
-  -webkit-transform: translateX(-7%);
-      -ms-transform: translateX(-7%);
-          transform: translateX(-7%);
+  -webkit-transform: translateX(-40%);
+      -ms-transform: translateX(-40%);
+          transform: translateX(-40%);
 }
 
 .magnifying-glass-path {
@@ -1771,7 +1780,7 @@ button.swiper-pagination-bullet {
 
 .overlay-2 {
   height: 64px;
-  left: 227px;
+  left: 126px;
   top: -13px;
   width: 64px;
 }
@@ -2551,7 +2560,7 @@ button:hover {
 .posts .container-posts {
   margin-top: 80px;
   margin: 0 auto;
-  margin-bottom: 140px;
+  margin-bottom: 80px;
 }
 
 .posts h2 {

@@ -95,24 +95,31 @@ a:hover {
 // }
 
     .arrows {
-        svg {
-        .prev slick-arrow {
-            width: 15px;
-            height: 15px;
-            border: 2px solid #998675;;
+        display: block;
+        margin: 0 auto;
+        align-items: center;
+        width: 85px;
+        height: 50px;
+        margin-top: 42px;
+            svg {
+            width: 21px;
+            height: 21px;
+            border: 3px solid#c7b299;
             border-radius: 50%;
+            stroke: #c7b299;
+            margin: 0 5px 0 5px;
         }
     }
     
-        svg {
-        .next slick-arrow {
-            width: 15px;
-            height: 15px;
-            border: 2px solid #998675;;
-            border-radius: 50%;
-        }
-    }
-    }
+        // svg {
+        // .next .slick-arrow {
+        //     width: 15px;
+        //     height: 15px;
+        //     border: 2px solid #998675;;
+        //     border-radius: 50%;
+    //     // }
+    // }
+    // }
 
 //     .prev {
 //         width: 15px;

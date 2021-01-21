@@ -88,21 +88,23 @@ cursor: pointer;
 
 .search {
     position: absolute;
-    width: 300px;
+    // width: 300px;
     
-  }
+  
   .magnifying-glass {
     position: relative;
     transform: translateX(14%);
     transition: transform 500ms;
     fill: white;
   }
-  svg:not(:root) {
+  svg {
     // left: -81px;
     // top: -7px;
+    width: 300px;
   }
+}
   .search.active .magnifying-glass {
-    transform: translateX(-7%);
+    transform: translateX(-40%);
   }
   .magnifying-glass-path {
     fill:#fff;
@@ -158,7 +160,7 @@ cursor: pointer;
   }
   .overlay-2 {
     height: 64px;
-    left: 227px;
+    left: 126px;
     top: -13px;
     width: 64px;
   }
@@ -810,7 +812,7 @@ span {
     .container-posts {
         margin-top: 80px;
         margin: 0 auto;
-        margin-bottom: 140px;
+        margin-bottom: 80px;
     }
 
     h2 {
