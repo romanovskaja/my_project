@@ -42,8 +42,11 @@ button:focus, .project button, .project html input[type=button], .project input[
     .header_icons {
         display: flex;
         cursor: pointer;
+        position: relative;
+        left: 140px;
         a {
             cursor: pointer;
+            padding-top: 20px;
         }
     }
     

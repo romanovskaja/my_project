@@ -506,10 +506,13 @@ button:focus,
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+  position: relative;
+  left: 140px;
 }
 
 .header_icons a {
   cursor: pointer;
+  padding-top: 20px;
 }
 
 .btn {
@@ -1686,14 +1689,15 @@ button.swiper-pagination-bullet {
 }
 
 .search {
-  position: absolute;
+  width: 300px;
+  margin-top: 22px;
 }
 
 .search .magnifying-glass {
   position: relative;
-  -webkit-transform: translateX(14%);
-      -ms-transform: translateX(14%);
-          transform: translateX(14%);
+  -webkit-transform: translateX(10%);
+      -ms-transform: translateX(10%);
+          transform: translateX(10%);
   -webkit-transition: -webkit-transform 500ms;
   transition: -webkit-transform 500ms;
   -o-transition: transform 500ms;
@@ -1707,9 +1711,9 @@ button.swiper-pagination-bullet {
 }
 
 .search.active .magnifying-glass {
-  -webkit-transform: translateX(-40%);
-      -ms-transform: translateX(-40%);
-          transform: translateX(-40%);
+  -webkit-transform: translateY(-6px);
+      -ms-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
 .magnifying-glass-path {
@@ -1773,15 +1777,15 @@ button.swiper-pagination-bullet {
 
 .overlay-1 {
   height: 64px;
-  left: 21px;
-  top: -22px;
+  left: 25px;
+  top: 0px;
   width: 64px;
 }
 
 .overlay-2 {
   height: 64px;
-  left: 126px;
-  top: -13px;
+  left: 85%;
+  top: 0px;
   width: 64px;
 }
 

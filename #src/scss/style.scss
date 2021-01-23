@@ -87,13 +87,13 @@ cursor: pointer;
 
 
 .search {
-    position: absolute;
-    // width: 300px;
+    width: 300px;
+    margin-top: 22px;
     
   
   .magnifying-glass {
     position: relative;
-    transform: translateX(14%);
+    transform: translateX(10%);
     transition: transform 500ms;
     fill: white;
   }
@@ -104,7 +104,8 @@ cursor: pointer;
   }
 }
   .search.active .magnifying-glass {
-    transform: translateX(-40%);
+    // transform: translateX(-40%);
+    transform: translateY(-6px);
   }
   .magnifying-glass-path {
     fill:#fff;
@@ -154,14 +155,14 @@ cursor: pointer;
   }
   .overlay-1 {
     height: 64px;
-    left: 21px;
-    top: -22px;
+    left: 25px;
+    top: 0px;
     width: 64px;
   }
   .overlay-2 {
     height: 64px;
-    left: 126px;
-    top: -13px;
+    left: 85%;
+    top: 0px;
     width: 64px;
   }
   .overlay:hover {
