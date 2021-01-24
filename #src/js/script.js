@@ -155,7 +155,7 @@ $('.slider').slick({
 
 
 let videoPlayer;
-let videoControl = document.querySelector('.videor');
+let videoControl = document.querySelector('.wr-video-btn');
 
 document.addEventListener("DOMContentLoaded", () => {
   initialiseMediaPlayer();
@@ -173,6 +173,22 @@ videoControl.addEventListener('click', () => {
   videoPlayer.pause();
  }
 });
+
+
+addEventListener('click', ()=> {
+  video.play();
+  startBtn.style.display = 'none'; // убираем кнопку старта
+  pauseBtn.style.display = 'block'; // и вместо старта покажем паузу
+  videotext.visibility = 'hidden'; // остальное прячем 
+})
+
+addEventListener('click', ()=> {
+  video.pause();
+  pauseBtn.style.display = 'none'; // прячем паузу
+  startBtn.style.display = 'block'; // показываем старт
+  videotext.visibility = 'visible'; // остальное опять показываем 
+})
+
 
 
 

@@ -1777,14 +1777,14 @@ button.swiper-pagination-bullet {
 
 .overlay-1 {
   height: 64px;
-  left: 25px;
+  left: 26px;
   top: 0px;
   width: 64px;
 }
 
 .overlay-2 {
   height: 64px;
-  left: 85%;
+  left: 84%;
   top: 0px;
   width: 64px;
 }
@@ -2370,6 +2370,10 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.wr-video-btn .pauseBtn {
+  display: none;
 }
 
 .wr-video-btn h3 {
