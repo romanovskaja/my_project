@@ -154,40 +154,67 @@ $('.slider').slick({
 // base.check();
 
 
-let videoPlayer;
-let videoControl = document.querySelector('.wr-video-btn');
+// let videoPlayer;
+// let videoControl = document.querySelector('.wr-video-btn');
 
-document.addEventListener("DOMContentLoaded", () => {
-  initialiseMediaPlayer();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   initialiseMediaPlayer();
+// });
+
+// function initialiseMediaPlayer() {
+//  videoPlayer = document.getElementById('video-player');
+//  videoPlayer.controls = false;
+// }
+// addEventListener('click', ()=> {
+//   video-player.play();
+//   startBtn.style.display = 'none'; // убираем кнопку старта
+//   pauseBtn.style.display = 'block'; // и вместо старта покажем паузу
+//   videotext.visibility = 'hidden'; // остальное прячем 
+// })
+
+// addEventListener('click', ()=> {
+//   video-player.pause();
+//   pauseBtn.style.display = 'none'; // прячем паузу
+//   startBtn.style.display = 'block'; // показываем старт
+//   videotext.visibility = 'visible'; // остальное опять показываем 
+// })
+
+// videoControl.addEventListener('click', () => {
+//  if (videoPlayer.paused || videoPlayer.ended) {
+//   videoPlayer.play();
+//  } else {
+//   videoPlayer.pause();
+//  }
+// });
+
+
+let mediaPlayer;
+let videoControl = document.querySelector('.startBtn');
+let videoText = document.querySelector('.videotext');
+videoControl.lastElementChild.style.display = 'none';
+
+document.addEventListener("DOMContentLoaded", function () { initialiseMediaPlayer(); }, false);
 
 function initialiseMediaPlayer() {
- videoPlayer = document.getElementById('video-player');
- videoPlayer.controls = false;
+	mediaPlayer = document.getElementById('video-player');
+	mediaPlayer.controls = false;
 }
 
 videoControl.addEventListener('click', () => {
- if (videoPlayer.paused || videoPlayer.ended) {
-  videoPlayer.play();
- } else {
-  videoPlayer.pause();
- }
+	if (mediaPlayer.paused || mediaPlayer.ended) {
+		videoControl.children[0].style.display = 'none';
+		videoControl.children[1].style.display = 'inline-block';
+		mediaPlayer.play();
+		videoText.style.visibility = 'hidden';
+	} else {
+    videoControl.children[1].style.display = 'none';
+		videoControl.children[0].style.display = 'inline-block';
+		mediaPlayer.pause();
+		videoText.style.visibility = 'visible';
+	}
 });
 
 
-addEventListener('click', ()=> {
-  video.play();
-  startBtn.style.display = 'none'; // убираем кнопку старта
-  pauseBtn.style.display = 'block'; // и вместо старта покажем паузу
-  videotext.visibility = 'hidden'; // остальное прячем 
-})
-
-addEventListener('click', ()=> {
-  video.pause();
-  pauseBtn.style.display = 'none'; // прячем паузу
-  startBtn.style.display = 'block'; // показываем старт
-  videotext.visibility = 'visible'; // остальное опять показываем 
-})
 
 
 
