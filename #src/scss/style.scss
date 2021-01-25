@@ -26,6 +26,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     }
+
 .header:before {
     content: '';
     position: absolute;
@@ -35,6 +36,23 @@
     width: 100%;
     background-color: transparent;
     }
+
+    .header_menu {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+        }
+        .header_icons {
+            display: flex;
+            cursor: pointer;
+            position: relative;
+            left: 140px;
+            a {
+                cursor: pointer;
+                padding-top: 20px;
+            }
+        }
 
     .container-castom {
         align-items: center;
@@ -211,7 +229,8 @@ color: #fff;
         font-family: "Montserrat";
         line-height: 1.5;
         max-width: 570px;
-        margin-bottom: 52px;    }
+        margin-bottom: 52px; 
+       }
 }
 
 button:hover {
@@ -621,24 +640,9 @@ span {
 
 }
 .container-player {
-    // background-image: url("../img/video.jpg");
-    // background-repeat: no-repeat;
     width: 100%;
 
-    // object-fit: cover;
-    // height: 100%;
-    // padding: 200px 0;
-    // .container-video {
-    //     iframe {
-    //         width: 560px;
-    //         height: 315px;
-    //     }
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     max-width: 552px;
-    //     margin: 0 auto;
-    //     text-align: center;
+
         h3 {
         font-size: 30px;
         font-family: "Raleway";
@@ -664,10 +668,13 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .pauseBtn {
-        display: none;
-    }
+    .videotext {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
     h3 {
+        text-align: center;
         font-size: 30px;
         font-family: "Raleway";
         color: rgb(255, 255, 255);
@@ -687,6 +694,7 @@ span {
         font-size: 14px;
         font-family: "Montserrat";
         color: rgb(199, 178, 153);
+        }
     }
 }
 
@@ -881,7 +889,7 @@ span {
     svg {
         fill: #c7b299;
         width: 5px;
-        height: 10px;
+        height: 8px;
         }
     }
 }  

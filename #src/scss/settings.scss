@@ -33,22 +33,7 @@ button:focus, .project button, .project html input[type=button], .project input[
         z-index: 1;
         }
 
-.header_menu {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center; 
-    }
-    .header_icons {
-        display: flex;
-        cursor: pointer;
-        position: relative;
-        left: 140px;
-        a {
-            cursor: pointer;
-            padding-top: 20px;
-        }
-    }
+
     
 .btn {
     font-family: "Raleway";

@@ -488,33 +488,6 @@ button:focus,
   z-index: 1;
 }
 
-.header_menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.header_icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  position: relative;
-  left: 140px;
-}
-
-.header_icons a {
-  cursor: pointer;
-  padding-top: 20px;
-}
-
 .btn {
   font-family: "Raleway";
   font-size: 14px;
@@ -1633,6 +1606,33 @@ button.swiper-pagination-bullet {
   background-color: transparent;
 }
 
+.header_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  left: 140px;
+}
+
+.header_icons a {
+  cursor: pointer;
+  padding-top: 20px;
+}
+
 .container-castom {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2372,11 +2372,21 @@ button:hover {
           align-items: center;
 }
 
-.wr-video-btn .pauseBtn {
-  display: none;
+.wr-video-btn .videotext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.wr-video-btn h3 {
+.wr-video-btn .videotext h3 {
+  text-align: center;
   font-size: 30px;
   font-family: "Raleway";
   color: white;
@@ -2384,7 +2394,7 @@ button:hover {
   margin-bottom: 25px;
 }
 
-.wr-video-btn p {
+.wr-video-btn .videotext p {
   font-size: 16px;
   font-family: "Montserrat";
   color: white;
@@ -2394,7 +2404,7 @@ button:hover {
   margin-bottom: 40px;
 }
 
-.wr-video-btn span {
+.wr-video-btn .videotext span {
   font-size: 14px;
   font-family: "Montserrat";
   color: #c7b299;
@@ -2654,7 +2664,7 @@ button:hover {
 .slider-posts .wrapper-posts svg {
   fill: #c7b299;
   width: 5px;
-  height: 10px;
+  height: 8px;
 }
 
 .photo-posts {
