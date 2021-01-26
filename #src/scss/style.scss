@@ -590,25 +590,21 @@ span {
     box-sizing: border-box;
     margin-right: 5px;
     margin-left: 5px;
-}
-.block::before {
-    content: url("../img/link.png");
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 29%;
-    left: 35%;
-    display: none;
+    .wr-link {
+        display: none;
+        position: absolute;
+        left: 35%;
+        top: 29%;
+        svg {
+            width: 26px;
+            height: 26px;
+            fill: #fff;
+        
+            margin: 0 14px 0 14px;
+        }
     }
-.block::after {
-    content: url("../img/lupa.png");
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 29%;
-    left: 55%;
-    display: none;
 }
+
 .block:hover  {
     background-color:#4e3427;
     cursor: pointer;
@@ -622,16 +618,16 @@ span {
     color:rgb(199, 178, 153);
     }
 }
-.block:hover::before {
-    display: inline;
-    cursor: pointer;
-
+.block:hover {
+    .wr-link {
+        display: inline;
+    }
+    svg:hover {
+        opacity: 1;
+        fill: rgb(199, 178, 153);
+    }
 }
-.block:hover::after {
-    display: inline;
-    cursor: pointer;
 
-}
 .hide {
     display: none;
 }
@@ -1091,7 +1087,7 @@ span {
         color: rgb(85, 85, 85);
         line-height: 1.429;
         word-break: break-all;    
-        span {
+        .date {
             font-size: 12px;
             font-family: "Montserrat";
             color: rgb(54, 54, 54);
@@ -1107,6 +1103,13 @@ span {
         margin-top: 25px;
         background-color: rgb(89, 95, 111);
         }
+    p:hover {
+        color: rgb(199, 178, 153);
+        .date {
+            color: #fff;
+
+        }
+    }
 
 }
 

@@ -537,12 +537,15 @@ a:hover {
 }
 
 .arrows svg {
-  width: 21px;
-  height: 21px;
-  border: 3px solid #c7b299;
-  border-radius: 50%;
-  stroke: #c7b299;
+  opacity: .7;
+  fill: #8c8c8c;
+  width: 22px;
+  height: 22px;
   margin: 0 5px 0 5px;
+}
+
+.arrows svg:hover {
+  fill: #c7b299;
 }
 
 .showmore:focus {
@@ -2274,24 +2277,18 @@ button:hover {
   margin-left: 5px;
 }
 
-.block::before {
-  content: url("../img/link.png");
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 29%;
-  left: 35%;
+.block .wr-link {
   display: none;
+  position: absolute;
+  left: 35%;
+  top: 29%;
 }
 
-.block::after {
-  content: url("../img/lupa.png");
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 29%;
-  left: 55%;
-  display: none;
+.block .wr-link svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+  margin: 0 14px 0 14px;
 }
 
 .block:hover {
@@ -2312,14 +2309,13 @@ button:hover {
   color: #c7b299;
 }
 
-.block:hover::before {
+.block:hover .wr-link {
   display: inline;
-  cursor: pointer;
 }
 
-.block:hover::after {
-  display: inline;
-  cursor: pointer;
+.block:hover svg:hover {
+  opacity: 1;
+  fill: #c7b299;
 }
 
 .hide {
@@ -2910,7 +2906,7 @@ button:hover {
   word-break: break-all;
 }
 
-.news-content p span {
+.news-content p .date {
   font-size: 12px;
   font-family: "Montserrat";
   color: #363636;
@@ -2925,6 +2921,14 @@ button:hover {
   display: block;
   margin-top: 25px;
   background-color: #595f6f;
+}
+
+.news-content p:hover {
+  color: #c7b299;
+}
+
+.news-content p:hover .date {
+  color: #fff;
 }
 
 .dribbble-widget {
