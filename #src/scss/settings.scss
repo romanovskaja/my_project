@@ -73,15 +73,6 @@ a:hover {
 } 
 
 
-
-// .prev-arrow {
-//     left: 38rem;
-// }
-
-// .next-arrow {
-//     right: 38rem;
-// }
-
     .arrows {
         display: block;
         margin: 0 auto;
@@ -95,67 +86,13 @@ a:hover {
             width: 22px;
             height: 22px;
             margin: 0 5px 0 5px;
+            cursor: pointer;
         }
         svg:hover {
             fill: #c7b299;
         }
     }
     
-        // svg {
-        // .next .slick-arrow {
-        //     width: 15px;
-        //     height: 15px;
-        //     border: 2px solid #998675;;
-        //     border-radius: 50%;
-    //     // }
-    // }
-    // }
-
-//     .prev {
-//         width: 15px;
-//         height: 15px;
-//         border: 2px solid #998675;;
-//         border-radius: 50%;
-//         position: absolute;
-//         bottom: -81px;
-//         svg {
-//             fill:#998675;
-//             width: 15px;
-//             height: 15px;
-//             position: absolute;
-//             // left: 33rem;
-//             // bottom: -77px;
-//         }
-//         // background-image: url(../img/free-icon-left-arrow-black-circular-button-54716.svg
-//     }
-// //     .prev {
-// //     // position: relative;
-// //     width: 24px;
-// //     height: 24px;
-// //     border: 2px solid #998675;;
-// //     border-radius: 50%;
-// //     position: absolute;
-// //     bottom: -81px;
-
-// // }
-// // .next {
-// //     // position: relative;
-// //     width: 24px;
-// //     height: 24px;
-// //     border: 2px solid #998675;;
-// //     border-radius: 50%;
-// //     position: absolute;
-// //     bottom: -81px;
-// //     svg {
-// //         fill:#998675;
-// //         width: 15px;
-// //         height: 15px;
-// //         position: absolute;
-// //         right: 33rem;
-// //         bottom: -77px;
-// //     }
-// // }
-
 .showmore:focus {
     outline: none !important;
 }

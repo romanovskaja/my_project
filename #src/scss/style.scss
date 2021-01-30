@@ -115,14 +115,14 @@ cursor: pointer;
     transition: transform 500ms;
     fill: white;
   }
-  svg {
-    // left: -81px;
-    // top: -7px;
-    width: 300px;
-  }
+//   svg {
+//     // left: -81px;
+//     // top: -7px;
+//     width: 300px;
+//   }
 }
   .search.active .magnifying-glass {
-    // transform: translateX(-40%);
+    transform: translateX(-30%);
     transform: translateY(-6px);
   }
   .magnifying-glass-path {
@@ -148,12 +148,15 @@ cursor: pointer;
     visibility: hidden;
     top: -7px;
     position: absolute;
+    transform: translateX(-206px);
+
   }
   .search.active .x {
     visibility: visible;
   }
   .search.searching .x {
     stroke-dashoffset: 0;
+    transform: translateX(-206px);
   }
   .input {
     font-size: 14px;
@@ -179,7 +182,7 @@ cursor: pointer;
   }
   .overlay-2 {
     height: 64px;
-    left: 84%;
+    left: 56%;
     top: 0px;
     width: 64px;
   }
@@ -1076,39 +1079,56 @@ span {
         font-weight: bold;
         line-height: 1.2;
     }
-    p {
+    .date {
         display: flex;
         flex-direction: column;
-        margin-top: 30px;
         margin-bottom: 20px;
+
+    p {
+        margin-bottom: 0px;
+        margin-top: 0;
         padding: 0;
         font-size: 14px;
         font-family: "Montserrat";
         color: rgb(85, 85, 85);
         line-height: 1.429;
-        word-break: break-all;    
-        .date {
-            font-size: 12px;
-            font-family: "Montserrat";
-            color: rgb(54, 54, 54);
-            line-height: 1.667;
+        word-break: break-all; 
+        a {
+            text-decoration: none;
+            color: rgb(0, 191, 243);
         }
+        a:hover {
+            color: rgb(199, 178, 153);
+
+        }
+   
     }
-    .line {
-        border: 1px solid;
+    span {
+        font-size: 12px;
+        font-family: "Montserrat";
+        color: rgb(54, 54, 54);
+        line-height: 1.667;
+
+    }
+}
+    .date:not(:last-child)::after {
+        content: '';
+        border: 1px solid  rgb(89, 95, 111);
         width: 270px;
-        height: 1px;
         margin: 0 auto;
         display: block;
         margin-top: 25px;
         background-color: rgb(89, 95, 111);
         }
-    p:hover {
-        color: rgb(199, 178, 153);
-        .date {
-            color: #fff;
 
+    .date:hover {
+        span {
+        color: rgb(199, 178, 153);
         }
+        p {
+            color: #fff;
+        }
+        
     }
 
 }

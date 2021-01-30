@@ -542,6 +542,7 @@ a:hover {
   width: 22px;
   height: 22px;
   margin: 0 5px 0 5px;
+  cursor: pointer;
 }
 
 .arrows svg:hover {
@@ -1709,11 +1710,10 @@ button.swiper-pagination-bullet {
   fill: white;
 }
 
-.search svg {
-  width: 300px;
-}
-
 .search.active .magnifying-glass {
+  -webkit-transform: translateX(-30%);
+      -ms-transform: translateX(-30%);
+          transform: translateX(-30%);
   -webkit-transform: translateY(-6px);
       -ms-transform: translateY(-6px);
           transform: translateY(-6px);
@@ -1748,6 +1748,9 @@ button.swiper-pagination-bullet {
   visibility: hidden;
   top: -7px;
   position: absolute;
+  -webkit-transform: translateX(-206px);
+      -ms-transform: translateX(-206px);
+          transform: translateX(-206px);
 }
 
 .search.active .x {
@@ -1756,6 +1759,9 @@ button.swiper-pagination-bullet {
 
 .search.searching .x {
   stroke-dashoffset: 0;
+  -webkit-transform: translateX(-206px);
+      -ms-transform: translateX(-206px);
+          transform: translateX(-206px);
 }
 
 .input {
@@ -1787,7 +1793,7 @@ button.swiper-pagination-bullet {
 
 .overlay-2 {
   height: 64px;
-  left: 84%;
+  left: 56%;
   top: 0px;
   width: 64px;
 }
@@ -2888,7 +2894,7 @@ button:hover {
   line-height: 1.2;
 }
 
-.news-content p {
+.news-content .date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2896,8 +2902,12 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 30px;
   margin-bottom: 20px;
+}
+
+.news-content .date p {
+  margin-bottom: 0px;
+  margin-top: 0;
   padding: 0;
   font-size: 14px;
   font-family: "Montserrat";
@@ -2906,28 +2916,37 @@ button:hover {
   word-break: break-all;
 }
 
-.news-content p .date {
+.news-content .date p a {
+  text-decoration: none;
+  color: #00bff3;
+}
+
+.news-content .date p a:hover {
+  color: #c7b299;
+}
+
+.news-content .date span {
   font-size: 12px;
   font-family: "Montserrat";
   color: #363636;
   line-height: 1.667;
 }
 
-.news-content .line {
-  border: 1px solid;
+.news-content .date:not(:last-child)::after {
+  content: '';
+  border: 1px solid #595f6f;
   width: 270px;
-  height: 1px;
   margin: 0 auto;
   display: block;
   margin-top: 25px;
   background-color: #595f6f;
 }
 
-.news-content p:hover {
+.news-content .date:hover span {
   color: #c7b299;
 }
 
-.news-content p:hover .date {
+.news-content .date:hover p {
   color: #fff;
 }
 
